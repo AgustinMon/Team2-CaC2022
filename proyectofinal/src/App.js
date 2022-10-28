@@ -1,13 +1,14 @@
 import './App.css';
+import Rutas from './Routes/Rutas';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hola Mundo
-        </p>
-     </header>
+      <h1>Netflix</h1>
+        <Rutas>
+          <Navbar></Navbar>
+        </Rutas>
     </div>
   );
 }
