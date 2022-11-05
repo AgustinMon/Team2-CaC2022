@@ -1,0 +1,7 @@
+.sidebar{
+    min-width: 20%;
+    background-color: var(--colorSidebar);
+    color: var(--colorLetras);
+    height: calc(100vh);
+    float: left;
+  } 

@@ -1,22 +1,24 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import Principal from '../Components/Principal/Principal';
+import { Categoria } from '../Components/Categoria/Categoria';
+import {NotFound} from '../Components/NotFound/NotFound';
+import {Login} from '../Components/LogIn/Login';
+import {Busqueda} from '../Components/Busqueda/Busqueda';
 
 const Rutas = (props) => {
 
   const children = props.children;
 
-  // reemplazar con un componente
-  const Login = "Bienvenido al login";
-  const Home = "Esta es la home";
-  const NotFound = '<h2>404 - Página no encontrada</h2>';
-
   return (
     <BrowserRouter>
           {children}
         <Routes>
-          <Route path="*" element={NotFound}/>
-          <Route exact path="/" element={Home}/>
-          <Route path="/Login" element={Login}/>
+          <Route path="*" element={<NotFound/>}/>
+          <Route exact path="/" element={<Principal/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/buscar/:palabra" element={<Busqueda/>}/>
+          <Route path="/Category/:Catid" element={<Categoria/>}/>
         </Routes>
     </BrowserRouter>
   );
