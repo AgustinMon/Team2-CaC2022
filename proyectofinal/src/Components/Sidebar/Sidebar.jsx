@@ -1,6 +1,6 @@
 import './sidebar.css';
 import {CATEGORIAS} from '../../Constants/constants';
-import {Buscador} from './Buscador';
+import {Buscador} from '../Buscador/Buscador';
 
 const Sidebar = (props) =>{
     console.log(CATEGORIAS);

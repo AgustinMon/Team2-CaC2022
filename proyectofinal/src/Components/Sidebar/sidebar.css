@@ -5,3 +5,7 @@
     height: calc(100vh);
     float: left;
   } 
+
+  input{
+    color: var(--letrasOscuras);
+  }

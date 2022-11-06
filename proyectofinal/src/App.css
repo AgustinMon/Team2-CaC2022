@@ -2,6 +2,7 @@
   --colorFondo : #000000;
   --colorLetras : #ffffff;
   --colorSidebar : #5c5c5c;
+  --letrasOscuras: #303030; 
 }
 
 * {
@@ -18,14 +19,4 @@ body {
   luego quitar con el nightmode */
   background-color: #202020 !important;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
