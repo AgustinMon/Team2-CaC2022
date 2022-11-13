@@ -12,7 +12,7 @@ export class Service {
         await fetch(url)
         .then((res) => res.json())
         .then((d)=> data = d)
-        .catch((err)=> console.log(err))
+        .catch((err)=> console.log("error from service", err))
         return data
     }
 

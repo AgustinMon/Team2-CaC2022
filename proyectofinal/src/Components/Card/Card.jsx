@@ -21,9 +21,9 @@ export default class Card extends Component {
     render() {
         return (
         <a href={"/View/"+this.id}>
-            <div class="card">
-                <img class="card-img-top img-thumbnail" src={"https://image.tmdb.org/t/p/original/" + this.image} alt="Card image cap" />
-                <h5 class="card-title">{this.title}</h5>
+            <div className="tarjeta">
+                <img className="card-img-top img-thumbnail" src={"https://image.tmdb.org/t/p/original/" + this.image} alt="Card image cap" />
+                <h5 className="titulo">{this.title}</h5>
             </div>
         </a>
         )

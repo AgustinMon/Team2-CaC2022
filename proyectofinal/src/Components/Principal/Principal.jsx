@@ -17,7 +17,7 @@ const Principal = () => {
             await Service.getData(pagina)
             .then((d) => {
                 setData(d.results)
-                console.log("d",d.results);
+                if (process.env.REACT_APP_ISDEBUG) console.log("d",d.results);
             });
         })()
         },[]
@@ -30,7 +30,7 @@ const Principal = () => {
             <h3>Componente tarjeta grande pendiente</h3>
             <h3>Componente carrousel de tarjetas chicas pendiente</h3>
             <div className="container flex">
-            {data.length>0 ? data.map(element => <Card info={element} /> ) : null}
+            {data && data.length>0 ? data.map(element => <Card key={element.id} info={element} /> ) : null}
             </div>
         </>
     );
