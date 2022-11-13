@@ -27,9 +27,8 @@ export const Categoria = () => {
     return (
         <>
         <Sidebar/>
-        <h2>Componente 2 - Pagina de Categoria:</h2>
-        <h1>{Catid}</h1> 
-        <p>Categoria: {Catid} </p>
+        {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''}
+        {CATEGORIAS.map((element)=> element.id == Catid? <h1>{element.name}</h1> : '')}
         {data.length>0 ? data.map(element => <Card info={element} /> ) : null}
         </>
         

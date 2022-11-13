@@ -44,4 +44,17 @@ export class Service {
         }
     }
 
+    static async getBySearch(word = null){
+        if (word && word.length > 3){
+            //https://api.themoviedb.org/3/search/movie?api_key=xxxxxxxxxxxxxxxx&language=en-US&query=ledge&page=1&include_adult=false
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&language=en-US&query=${word}&page=1&include_adult=false`;
+            let data = [];
+            await fetch(url)
+            .then((data)=>data.json())
+            .then((d)=> data = d)
+            .catch((error)=>console.log(error));
+            return data;
+        }
+    }
+
 }
