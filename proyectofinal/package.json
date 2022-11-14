@@ -2,7 +2,7 @@
   "name": "proyectofinal",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://agustinmon.github.io/Team2-CaC2022/",
+  "homepage" : "https://agustinmon.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
