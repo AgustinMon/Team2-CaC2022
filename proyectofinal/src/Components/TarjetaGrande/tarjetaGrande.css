@@ -1,0 +1,25 @@
+.tgrande {
+    height: 350px;
+    background-color: rgb(251, 251, 251);
+    overflow:hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tgrande h1{
+    padding: 25px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+.tgrande h2, h3, p{
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.tgrande button{
+    position:absolute;
+    left: 25px;
+    bottom: 25px;
+}
