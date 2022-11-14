@@ -1,3 +1,4 @@
 nav{
     color : #444444;
+    height: var(--navbarheight);
 }

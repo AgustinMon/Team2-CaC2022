@@ -3,6 +3,7 @@
   --colorLetras : #ffffff;
   --colorSidebar : #5c5c5c;
   --letrasOscuras: #303030; 
+  --navbarheight: 60px;
 }
 
 * {
@@ -19,4 +20,9 @@ body {
   luego quitar con el nightmode */
   background-color: #202020 !important;
   margin: 0;
+}
+
+.peliculas{
+  display: grid;
+  padding:20px;
 }

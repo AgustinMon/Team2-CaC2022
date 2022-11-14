@@ -4,6 +4,8 @@ import {Service} from "../../Services/Service";
 import { useState } from "react";
 import { useEffect } from "react";
 import Card from "../Card/Card";
+import TarjetaGrande from "../TarjetaGrande/TarjetaGrande";
+import { Login } from "../LogIn/Login";
 
 const Principal = () => {
 
@@ -25,13 +27,17 @@ const Principal = () => {
 
     return (
         <>
-            <Sidebar/>
-            <h2>Componente 1 - Pagina principal:</h2>
-            <h3>Componente tarjeta grande pendiente</h3>
-            <h3>Componente carrousel de tarjetas chicas pendiente</h3>
-            <div className="container flex">
-            {data && data.length>0 ? data.map(element => <Card key={element.id} info={element} /> ) : null}
-            </div>
+        {!process.env.REACT_APP_ISDEBUG 
+            ? <Login/>
+            : <>
+                <Sidebar/>
+                <TarjetaGrande/>
+                <div className="container flex peliculas">
+                {data && data.length>0 ? data.map(element => <Card key={element.id} info={element} /> ) : null}
+                </div>
+            </>
+        }
+
         </>
     );
 }
