@@ -24,7 +24,7 @@ const [nombre, setNombre] = useState("");
           value={nombre}
         />
         {/* <input type="submit" className="btn btn-primary" value="buscar" /> */}
-        <input type="submit" className="btn btn-primary" value="buscar" />
+        <input type="submit" className="btn btn-primary" value="BUSCAR" />
       </fieldset>
     </form>
   );

@@ -1,11 +1,14 @@
 nav{
-    color : #444444;
     height: var(--navbarheight);
 }
 
 
 .navbar-nav {
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
+.navbar-nav a {
+    color : #a5b4fc;
+    font-weight: bold; 
+}
