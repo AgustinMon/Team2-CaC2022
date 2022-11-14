@@ -1,5 +1,6 @@
-a {
-    color: #a5b4fc !important;
+nav{
+    color : #444444;
+    height: var(--navbarheight);
 }
 
 
