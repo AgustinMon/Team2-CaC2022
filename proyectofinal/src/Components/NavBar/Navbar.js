@@ -11,6 +11,8 @@ export default function NavBar(props) {
         <Navbar.Brand href="#home"><img alt="Logo" src={props.src} width={props.size} className="d-inline-block align-top"/></Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="/" activeClassname>Home</Nav.Link>
+          <Nav.Link href="../Series">Series</Nav.Link>
+          <Nav.Link href="../Peliculas">Peliculas</Nav.Link>
           <Nav.Link href="../LogIn">Login</Nav.Link>
         </Nav>
         <Buscador />

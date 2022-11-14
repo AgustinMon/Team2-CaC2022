@@ -4,8 +4,10 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Buscador.css"
 /* Tag Form en uso, no form de HTML */
 
-export const Buscador = () => {
-  const [nombre, setNombre] = useState("");
+// export const Buscador = () => {
+  export const Buscador = () => {
+
+const [nombre, setNombre] = useState("");
   const onInputChange = (e) => {
     setNombre(e.target.value);
   };
@@ -21,8 +23,10 @@ export const Buscador = () => {
           onChange={onInputChange}
           value={nombre}
         />
+        {/* <input type="submit" className="btn btn-primary" value="buscar" /> */}
         <input type="submit" className="btn btn-primary" value="buscar" />
       </fieldset>
     </form>
   );
 };
+
