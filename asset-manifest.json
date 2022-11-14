@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/github.io/Team2-CaC2022/static/css/main.cc734c6b.css",
-    "main.js": "/github.io/Team2-CaC2022/static/js/main.3dc2d68f.js",
-    "index.html": "/github.io/Team2-CaC2022/index.html",
-    "main.cc734c6b.css.map": "/github.io/Team2-CaC2022/static/css/main.cc734c6b.css.map",
-    "main.3dc2d68f.js.map": "/github.io/Team2-CaC2022/static/js/main.3dc2d68f.js.map"
+    "main.css": "/Team2-CaC2022/static/css/main.cc734c6b.css",
+    "main.js": "/Team2-CaC2022/static/js/main.bbd1d94d.js",
+    "index.html": "/Team2-CaC2022/index.html",
+    "main.cc734c6b.css.map": "/Team2-CaC2022/static/css/main.cc734c6b.css.map",
+    "main.bbd1d94d.js.map": "/Team2-CaC2022/static/js/main.bbd1d94d.js.map"
   },
   "entrypoints": [
     "static/css/main.cc734c6b.css",
-    "static/js/main.3dc2d68f.js"
+    "static/js/main.bbd1d94d.js"
   ]
 }
