@@ -1,3 +1,9 @@
 nav{
     color : #444444;
 }
+
+nav-link {
+    color: #483285;
+    size: 100px;
+}
+

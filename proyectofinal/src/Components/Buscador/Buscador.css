@@ -1,0 +1,18 @@
+.form-group {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+.InputBuscador {
+    margin: 2px;
+}
+
+.btn {
+    margin: 2px;
+}
+
+.Icono {
+    margin: auto;
+    padding: 10px;
+}
