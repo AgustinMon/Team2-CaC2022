@@ -5,6 +5,7 @@ import { Categoria } from '../Components/Categoria/Categoria';
 import {NotFound} from '../Components/NotFound/NotFound';
 import {Login} from '../Components/LogIn/Login';
 import {Busqueda} from '../Components/Busqueda/Busqueda';
+import {Film} from '../Components/Film/Film';
 
 const Rutas = (props) => {
 
@@ -19,6 +20,7 @@ const Rutas = (props) => {
           <Route path="/Login" element={<Login/>}/>
           <Route path="/buscar/:palabra" element={<Busqueda/>}/>
           <Route path="/Category/:Catid" element={<Categoria/>}/>
+          <Route path="/View/:movie_id" element={<Film/>}/>
         </Routes>
     </BrowserRouter>
   );

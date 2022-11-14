@@ -1,0 +1,11 @@
+.tarjeta {
+    width: 200px;
+    height: 250px;
+    border:1px solid gray;
+    background-color: aliceblue;
+    display: inline-flex;
+}
+
+.titulo {
+    display:block;
+}

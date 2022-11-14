@@ -3,7 +3,7 @@ import {CATEGORIAS} from '../../Constants/constants';
 import {Buscador} from '../Buscador/Buscador';
 
 const Sidebar = (props) =>{
-    console.log(CATEGORIAS);
+
     return(
         <>
         <aside className="sidebar p-4">
@@ -11,7 +11,7 @@ const Sidebar = (props) =>{
         <p>Buscar...</p>
         <Buscador/>
         <ul>
-            {CATEGORIAS.map((elem) => <li><a className="link-light" href={`/Category/${elem}`}>{elem}</a></li>)}
+            {CATEGORIAS.map((elem, i) => <li key={i}><a className="link-light" href={`/Category/${elem.id}`}>{elem.name}</a></li>)}
         </ul>
 
         <p>Team 2 - CaC Reat - 2 cuat</p>
