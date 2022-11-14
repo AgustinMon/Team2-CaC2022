@@ -1,6 +1,7 @@
 import './sidebar.css';
 import {CATEGORIAS} from '../../Constants/constants';
 import {Buscador} from '../Buscador/Buscador';
+import {Link} from "react-router-dom";
 
 const Sidebar = (props) =>{
 
@@ -11,7 +12,7 @@ const Sidebar = (props) =>{
         <p>Buscar...</p>
         <Buscador/>
         <ul>
-            {CATEGORIAS.map((elem, i) => <li key={i}><a className="link-light" href={`/Category/${elem.id}`}>{elem.name}</a></li>)}
+            {CATEGORIAS.map((elem, i) => <li key={i}><Link className="link-light" to={`/Category/${elem.id}`}>{elem.name}</Link></li>)}
         </ul>
 
         <p>Team 2 - CaC Reat - 2 cuat</p>

@@ -15,7 +15,7 @@ const Rutas = (props) => {
     <BrowserRouter>
           {children}
         <Routes>
-          <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound/>}/>
           <Route exact path="/" element={<Principal/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/buscar/:palabra" element={<Busqueda/>}/>
