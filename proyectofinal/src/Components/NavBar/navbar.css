@@ -11,15 +11,49 @@ nav{
 .navbar-nav a {
     color : #a5b4fc;
     font-weight: bold; 
+    font-size: 20px;
 }
 
 .Login {
     background-color: #4845d2 !important;
-    margin: 2px;
+    margin: 2px 20px;
     font-weight: bold !important;
     border-radius: 1rem !important;
 }
 
-.container {
-    display: flex;
+.navbar .InputBuscador {
+    height: 40px;
+    outline: none;
+    box-sizing: border-box;
+    width: 0;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border:1px solid #000;
+    transition: all .7s ease;
+    background-color: #a5b4fc;
+} 
+
+.navbar .lupa {
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #4845d2 !important;
+        border-radius: 50px !important;
+        cursor: pointer;
+        transition: .5s;
+    } 
+.navbar .lupa svg {
+    transition: all .7s ease;
 }
+
+.navbar .form-group:hover input {
+        background-color: #a5b4fc;
+        width: 350px;
+    }
+
+ .navbar .form-group:hover svg {
+        transform: rotate(-360deg);
+    }

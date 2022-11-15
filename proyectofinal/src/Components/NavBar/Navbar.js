@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Button from 'react-bootstrap/Button';
-
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 export default function NavBar(props) {
   return (
     <Navbar bg="dark" variant="dark">
@@ -16,8 +16,10 @@ export default function NavBar(props) {
           <Nav.Link href="../Peliculas">Peliculas</Nav.Link>
           <Nav.Link href="../LogIn">Login</Nav.Link>
         </Nav>
+        <ButtonGroup className="buttonGroup">
         <Buscador />
-        <Button type="submit" className="Login">LOGIN</Button>{' '}
+          </ButtonGroup>
+          <Button type="submit" className="Login">LOGIN</Button>{' '}  
       </Container>
     </Navbar>
   );

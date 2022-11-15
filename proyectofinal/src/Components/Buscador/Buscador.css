@@ -2,6 +2,7 @@
     display: flex;
     position: relative;
     margin: auto;
+    margin-right: 10px;
 }
 
 .InputBuscador {
@@ -11,6 +12,7 @@
 }
 
 .InputBuscador::placeholder {
+    font-size: 16px;
     color: #4845d2;
     font-weight: bold;
 }
@@ -20,3 +22,5 @@
     margin: 2px;
     border-radius: 50px !important;
     box-shadow: 1px 1px 1px #000000;}
+
+  
