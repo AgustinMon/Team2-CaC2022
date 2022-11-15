@@ -10,19 +10,20 @@ nav{
 
 .navbar-nav a {
     color : #a5b4fc;
-    font-weight: bold; 
-    font-size: 20px;
+    /* font-weight: bold;  */
+    font-size: 16px;
 }
 
 .Login {
+    height: 37px;
     background-color: #4845d2 !important;
     margin: 2px 20px;
     font-weight: bold !important;
-    border-radius: 1rem !important;
+    border-radius: 2rem 2rem 0 2rem !important;
 }
 
 .navbar .InputBuscador {
-    height: 40px;
+    height: 37px;
     outline: none;
     box-sizing: border-box;
     width: 0;
@@ -36,12 +37,14 @@ nav{
 } 
 
 .navbar .lupa {
-        height: 40px;
+        height: 37px;
         position: absolute;
         right: 0;
         top: 0;
         background-color: #4845d2 !important;
-        border-radius: 50px !important;
+        /* border-radius: 50px !important; */
+        border-radius: 2rem 2rem 0 2rem !important;
+
         cursor: pointer;
         transition: .5s;
     } 
