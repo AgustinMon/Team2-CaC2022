@@ -9,14 +9,14 @@ nav{
 }
 
 .navbar-nav a {
-    color : #a5b4fc;
+    color : var(--colorSecundario);
     /* font-weight: bold;  */
     font-size: 16px;
 }
 
 .Login {
     height: 37px;
-    background-color: #4845d2 !important;
+    background-color: var(--colorPrincipal) !important;
     margin: 2px 20px;
     font-weight: bold !important;
     border-radius: 2rem 2rem 0 2rem !important;
@@ -33,7 +33,7 @@ nav{
     font-size: 20px;
     border:1px solid #000;
     transition: all .7s ease;
-    background-color: #a5b4fc;
+    background-color: var(--colorSecundario);
 } 
 
 .navbar .lupa {
@@ -41,8 +41,7 @@ nav{
         position: absolute;
         right: 0;
         top: 0;
-        background-color: #4845d2 !important;
-        /* border-radius: 50px !important; */
+        background-color: var(--colorPrincipal) !important;
         border-radius: 2rem 2rem 0 2rem !important;
 
         cursor: pointer;
@@ -53,7 +52,7 @@ nav{
 }
 
 .navbar .form-group:hover input {
-        background-color: #a5b4fc;
+        background-color: var(--colorSecundario);
         width: 350px;
     }
 
