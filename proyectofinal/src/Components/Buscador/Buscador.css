@@ -1,0 +1,26 @@
+.form-group {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.InputBuscador {
+    margin: 2px;
+    border-radius: 1rem;
+    background-color: #a5b4fc;
+}
+
+.InputBuscador::placeholder {
+    font-size: 16px;
+    color: #4845d2;
+    font-weight: bold;
+}
+
+.lupa {
+    background-color: #4845d2 !important;
+    margin: 2px;
+    border-radius: 50px !important;
+    box-shadow: 1px 1px 1px #000000;}
+
+  
