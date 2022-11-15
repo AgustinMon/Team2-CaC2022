@@ -3,6 +3,7 @@ import { Buscador } from "../Buscador/Buscador";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Button from 'react-bootstrap/Button';
 
 export default function NavBar(props) {
   return (
@@ -16,6 +17,7 @@ export default function NavBar(props) {
           <Nav.Link href="../LogIn">Login</Nav.Link>
         </Nav>
         <Buscador />
+        <Button type="submit" className="Login">LOGIN</Button>{' '}
       </Container>
     </Navbar>
   );

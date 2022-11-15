@@ -12,3 +12,14 @@ nav{
     color : #a5b4fc;
     font-weight: bold; 
 }
+
+.Login {
+    background-color: #4845d2 !important;
+    margin: 2px;
+    font-weight: bold !important;
+    border-radius: 1rem !important;
+}
+
+.container {
+    display: flex;
+}
