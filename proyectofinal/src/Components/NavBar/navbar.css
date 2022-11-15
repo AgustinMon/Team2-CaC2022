@@ -1,4 +1,61 @@
 nav{
-    color : #444444;
     height: var(--navbarheight);
 }
+
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-nav a {
+    color : var(--colorSecundario);
+    /* font-weight: bold;  */
+    font-size: 16px;
+}
+
+.Login {
+    height: 37px;
+    background-color: var(--colorPrincipal) !important;
+    margin: 2px 20px;
+    font-weight: bold !important;
+    border-radius: 2rem 2rem 0 2rem !important;
+}
+
+.navbar .InputBuscador {
+    height: 37px;
+    outline: none;
+    box-sizing: border-box;
+    width: 0;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border:1px solid #000;
+    transition: all .7s ease;
+    background-color: var(--colorSecundario);
+} 
+
+.navbar .lupa {
+        height: 37px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: var(--colorPrincipal) !important;
+        border-radius: 2rem 2rem 0 2rem !important;
+
+        cursor: pointer;
+        transition: .5s;
+    } 
+.navbar .lupa svg {
+    transition: all .7s ease;
+}
+
+.navbar .form-group:hover input {
+        background-color: var(--colorSecundario);
+        width: 350px;
+    }
+
+ .navbar .form-group:hover svg {
+        transform: rotate(-360deg);
+    }
