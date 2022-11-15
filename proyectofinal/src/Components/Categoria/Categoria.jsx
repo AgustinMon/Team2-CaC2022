@@ -19,17 +19,17 @@ export const Categoria = () => {
                 setData(response.results);
                 console.log("results from category", response.results);
             })
-            .then(()=>console.log("data from categories", data))
+            .then(()=>console.log("data from categories", Catid, data))
             .catch((error)=>{console.log("error from categories", error)})
         })()
-    },[])
+    },[Catid])
 
     return (
         <>
         <Sidebar/>
         {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''}
         {CATEGORIAS.map((element)=> element.id == Catid? <h1>{element.name}</h1> : '')}
-        {data.length>0 ? data.map(element => <Card info={element} /> ) : null}
+        {data.length>0 ? data.map(element => <Card info={element} />) : null}
         </>
         
     )
