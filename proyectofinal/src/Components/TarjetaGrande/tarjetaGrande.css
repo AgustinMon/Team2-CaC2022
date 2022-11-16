@@ -8,15 +8,11 @@
 }
 
 .tgrande h1{
-    padding: 25px;
+    padding: 25px 25px 25px 25px;
     color: rgb(255, 255, 255);
     text-align: right;
 }
 
-.tgrande h2, h3, p{
-    color: rgb(255, 255, 255);
-    text-align: left;
-}
 
 .tgrande .btn{
     position:absolute;
@@ -24,3 +20,56 @@
     bottom: 25px;
 }
 
+.tgrande-desc {
+    position: absolute;
+    bottom: 50px;
+    right: 25px;
+    width: 80%;
+    float: right;
+    margin-right: 20px;
+}
+
+.tgrande-desc h2, h3, p{
+    color: rgb(255, 255, 255);
+    text-align: right !important;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 955px) {
+    .tgrande-desc {
+        position: absolute;
+        bottom: 30px;
+        right: 2%;
+        width: 95%;
+        float: right;
+    }
+
+    .tgrande h1{
+        font-size: rem;
+        padding: 10px 25px 10px 25px;
+        color: rgb(255, 255, 255);
+        text-align: right;
+    }
+
+    .tgrande-desc p{
+        visibility: collapse;
+    }
+}
+
+@media (max-width: 715px) {
+    .tgrande-desc {
+        position: absolute;
+        bottom: 10px;
+        right: 2%;
+        width: 95%;
+        float: right;
+    }
+
+    .tgrande h1{
+        font-size: rem;
+        padding: 10px 25px 0px 25px;
+        color: rgb(255, 255, 255);
+        text-align: right;
+    }
+}

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import {Service} from '../../Services/Service';
 import Card from "../Card/Card";
+import "./categoria.css";
 
 export const Categoria = () => {
 

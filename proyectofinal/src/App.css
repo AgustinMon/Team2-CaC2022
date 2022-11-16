@@ -1,11 +1,12 @@
 :root{
   --colorFondo : #000000;
   --colorLetras : #ffffff;
-  --colorSidebar : #464646;
+  --colorSidebar : rgba(56, 55, 55, 0.5);
   --letrasOscuras: #303030; 
   --navbarheight: 60px;
   --colorPrincipal: #4845d2;
   --colorSecundario:#a5b4fc;
+  --anchosiderbar: 15px;
 }
 
 * {

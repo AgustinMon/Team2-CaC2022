@@ -30,9 +30,11 @@ const TarjetaGrande = () => {
             backgroundSize: "cover" , 
             backgroundRepeat: "no-repeat"}}
         >
-            <h1>{data.title}</h1>
-            <h3>{data.vote_average}</h3>
-            <p>{data.overview}</p>
+            <div className="tgrande-desc">
+                <h1>{data.title}</h1>
+                <h3>{data.vote_average}</h3>
+                <p>{data.overview}</p>
+            </div>
             <Link to={"/View/"+data.id} className="btn btn-danger">Ver Ahora</Link>
         </div>
     )

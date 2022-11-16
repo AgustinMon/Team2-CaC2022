@@ -18,15 +18,3 @@
 .contenedor h1, h2, h3, p, input{
     text-align: center !important;
 }
-
-.input-email{
-    min-width: 70%;
-    height: 48px;
-    border-radius: 10px;
-    border: none;
-    margin-right: 20px;
-}
-
-.formulario input{
-    display:inline;
-}
