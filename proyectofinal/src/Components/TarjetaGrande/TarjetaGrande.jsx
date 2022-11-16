@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import {IMAGE_URL} from "../../Constants/constants"
 import { Service } from "../../Services/Service";
+import {Link} from "react-router-dom";
+
 import "./tarjetaGrande.css";
 
 const TarjetaGrande = () => {
@@ -31,7 +33,7 @@ const TarjetaGrande = () => {
             <h1>{data.title}</h1>
             <h3>{data.vote_average}</h3>
             <p>{data.overview}</p>
-            <button className="btn btn-danger">Ver Ahora</button>
+            <Link to={"/View/"+data.id} className="btn btn-danger">Ver Ahora</Link>
         </div>
     )
 }
