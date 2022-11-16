@@ -1,17 +1,19 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import {IMAGE_URL} from "../../Constants/constants"
+import { MainContext } from "../../Context/MainContext";
 import { Service } from "../../Services/Service";
 import "./tarjetaGrande.css";
 
 const TarjetaGrande = () => {
 
+    let { typeFilm, language } = useContext(MainContext);
     const [data, setData] = useState([]);
     
     useEffect(
         ()=>{
             (async ()=>{
-                await Service.getData(1)
+                await Service.getPopular(typeFilm, language)
                 .then((d)=> setData(d.results[0]))
                 .catch((error) => console.log(error))
             })()

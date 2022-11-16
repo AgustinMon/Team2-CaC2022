@@ -16,7 +16,7 @@ const [nombre, setNombre] = useState("");
   
   return (
     <form action={`/buscar/${nombre}`}>
-      <fieldset class="form-group">
+      <fieldset className="form-group">
         <input
           className="InputBuscador"
           type="text"

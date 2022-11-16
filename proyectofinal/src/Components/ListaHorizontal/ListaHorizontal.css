@@ -1,0 +1,52 @@
+.titulo_lista {
+	text-align: start;
+}
+
+.contenedor_lista {
+    padding-bottom: 30px;
+	padding-left: 30px;
+	margin-top: 20px;
+    position: relative;
+	overflow: hidden;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_lista .flecha-izquierda,
+.contenedor_lista .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.contenedor_lista .flecha-izquierda {
+	left: 0;
+}
+
+.contenedor_lista .flecha-derecha {
+	right: 0;
+}
+
+.contenedor_lista .flecha-izquierda:hover,
+.contenedor_lista .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.lista {
+	width: 100%;
+	padding: 8px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
