@@ -46,10 +46,15 @@ export const Film = () => {
                 backgroundSize: "cover" , 
                 backgroundRepeat: "no-repeat"}}>
             </div>
-
-            <img className="company" 
+            {
+                data.production_companies && data.production_companies.length && data.production_companies[0].logo_path!="null" > 0 ?
+                <img className="company" 
                 src= {IMAGE_URL + data.production_companies[0].logo_path}>
-            </img>
+                </img>
+                :
+                <span></span>
+            }
+
 
         </div>
         </>
