@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 
 import "./Buscador.css"
@@ -24,9 +25,13 @@ const [nombre, setNombre] = useState("");
           onChange={onInputChange}
           value={nombre}
         />
-        <Button type="submit" className="lupa"><FontAwesomeIcon icon={faSearch} className="Icono" /></Button>{' '}
+        <Link to={"/buscar/"+nombre} className="lupa"><FontAwesomeIcon icon={faSearch} className="Icono" /></Link>{' '}
+
       </fieldset>
     </form>
   );
 };
+
+//quitado provisoriamente
+//<Button type="submit" className="lupa"><FontAwesomeIcon icon={faSearch} className="Icono" /></Button>
 

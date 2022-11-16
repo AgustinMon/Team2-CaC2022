@@ -18,6 +18,8 @@
 }
 
 .lupa {
+    width:40px;
+    height:40px;
     background-color: var(--colorPrincipal) !important;
     margin: 2px;
     border-radius: 50px !important;
