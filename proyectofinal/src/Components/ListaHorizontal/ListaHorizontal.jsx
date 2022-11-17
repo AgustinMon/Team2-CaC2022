@@ -26,11 +26,11 @@ export default function ListaHorizontal(props) {
 const fila = document.querySelector('#lista-' + props.id);
 
 const moverDerecha = () => {
-	fila.scrollLeft += fila.offsetWidth;
+	fila.scrollLeft += fila.offsetWidth - 30;
 };
 
 const moverIzquierda = () => {
-	fila.scrollLeft -= fila.offsetWidth;
+	fila.scrollLeft -= fila.offsetWidth + 30;
 };
 
   return (
@@ -46,8 +46,7 @@ const moverIzquierda = () => {
               element.genre_ids.map((id) =>
                 generos.push(buscarGenero(id)?.name)
               );
-              console.log(generos);
-              return <Card key={element.id} info={element} generos={generos} />;
+              return <Card key={element.id} info={element} generos={generos} lista={props.id} />;
             })
           : null}
       </div>

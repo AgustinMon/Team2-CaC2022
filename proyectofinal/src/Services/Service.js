@@ -49,8 +49,8 @@ export class Service {
         return data;
       }
     
-      static async getCategory(genre, language) { // recibe los generos como una lista de ids
-        const url = `${process.env.REACT_APP_BASE_PATH}/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${genre.join(",")}&language=${language}`;
+      static async getCategory(genre, tipo, language) { // recibe los generos como una lista de ids
+        const url = `${process.env.REACT_APP_BASE_PATH}/discover/${tipo}?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${genre.join(",")}&language=${language}`;
         let data = {};
         console.log(url);
         await fetch(url)
