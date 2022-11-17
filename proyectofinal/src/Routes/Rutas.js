@@ -16,6 +16,7 @@ const Rutas = (props) => {
           {children}
         <Routes>
           <Route exact path="/" element={<Principal/>}/>
+          <Route path="/Team2-CaC2022/" element={<Principal/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/buscar/:palabra" element={<Busqueda/>}/>
           <Route path="/Category/:Catid" element={<Categoria/>}/>
