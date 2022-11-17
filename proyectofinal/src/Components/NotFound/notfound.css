@@ -1,0 +1,20 @@
+.fondo{
+    background-image: url(../../../public/images/perspective_alpha_website_large.jpg);
+    height: calc(100vh);
+    width: 100%;
+}
+
+.contenedor{
+    margin: 0 auto 0 auto;
+    padding-top: 100px;
+    width: 90%;
+}
+
+.formulario {
+    margin: 0 auto 0 auto;
+    width: 80%;
+}
+
+.contenedor h1, h2, h3, p, input{
+    text-align: center !important;
+}

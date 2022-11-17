@@ -1,16 +1,42 @@
 .sidebar{
-    min-width: 17%;
-    background-color: var(--colorSidebar);
-    color: var(--colorLetras);
-    height: calc(120vh);
-    float: left;
-  } 
+  min-width: var(--anchosiderbar);
+  background-color: var(--colorSidebar);
+  color: var(--colorLetras);
+  height: calc(120vh);
+  float: left;
+} 
 
-  input{
-    color: var(--letrasOscuras);
-  }
+input{
+  color: var(--letrasOscuras);
+}
 
-  .sidebar ul li a{
-    text-decoration: none;
-    font-size: 1.2rem;
+.sidebar ul li a{
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.sidebar ul{
+  margin-top: 40px;
+}
+
+.sidebar li:hover{
+  background-color: #686868;
+}
+
+.desc-grupo{
+  margin: 0;
+  width: 100%;
+  border-top: 1px solid #686868;
+  position: relative;
+  bottom: 10px;
+}
+
+.desc-grupo p{
+  text-align: left;
+}
+
+@media (max-width: 500px){
+  .sidebar{
+    width: 200px;
   }
+}

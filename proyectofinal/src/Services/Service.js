@@ -89,4 +89,18 @@ export class Service {
           .catch((err) => console.log("error from service: ", err))
         return data;
       }
+
+      // agrego provisorio porque da error Film.jsx
+      static async getFilm(movie_id = null){
+        if(movie_id!=null){
+            //https://api.themoviedb.org/3/movie/{movie_id}?api_key=xxxxxxxxxxxxxxxxxxxxxxxxxx&language=en-US
+            const url = `${process.env.REACT_APP_BASE_PATH}/movie/${movie_id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
+            let data = [];
+            await fetch(url)
+            .then((d)=>d.json())
+            .then((d)=>data = d)
+            .catch((error)=> console.log(error))
+            return data
+        }
+    }
 }
