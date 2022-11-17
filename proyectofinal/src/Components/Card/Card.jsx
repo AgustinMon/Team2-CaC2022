@@ -9,6 +9,7 @@ export default class Card extends Component {
     constructor(props) {
         super();
         // info es un objeto con dada pelicula
+        this.listaId = props.lista
         this.title = props.info.title;
         this.id = props.info.id;
         this.generos = props.generos;
@@ -22,12 +23,12 @@ export default class Card extends Component {
     }
 
     mostrarInfo = event => {
-        const info = document.getElementById('card_info_' + this.id);
+        const info = document.getElementById('card_info_' + this.listaId + '_' + this.id);
         info.style.display = 'flex';
     }
 
     ocultarInfo = event => {
-        const info = document.getElementById('card_info_' + this.id);
+        const info = document.getElementById('card_info_' + this.listaId + '_' + this.id);
         info.style.display = 'none';
     }
 
@@ -42,7 +43,7 @@ export default class Card extends Component {
         return (
         <Link to={"/View/"+this.id}>
             <div className="tarjeta" onMouseOver={this.mostrarInfo} onMouseLeave={this.ocultarInfo} style={this.imagen}>
-                <div className="card_info" id={"card_info_" + this.id }>
+                <div className="card_info" id={"card_info_" + this.listaId + '_' + this.id}>
                     <h5 className="titulo">{this.title}</h5>
                     <div className="generos">
                         {this.generos.map((gen, index)=> <p className="genero" key={index}>{gen}</p>)}
