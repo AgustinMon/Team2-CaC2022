@@ -5,6 +5,7 @@
 .contenedor_lista {
     padding-bottom: 30px;
 	padding-left: 30px;
+	padding-right: 30px;
 	margin-top: 20px;
     position: relative;
 	overflow: hidden;

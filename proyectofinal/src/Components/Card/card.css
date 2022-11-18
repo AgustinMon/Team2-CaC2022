@@ -29,6 +29,7 @@
 
 .generos {
     display: flex;
+    flex-wrap: wrap;
     font-size: 14px;
 }
 
