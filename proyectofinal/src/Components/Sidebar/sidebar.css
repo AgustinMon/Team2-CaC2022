@@ -2,7 +2,7 @@
   min-width: var(--anchosiderbar);
   background-color: var(--colorSidebar);
   color: var(--colorLetras);
-  height: calc(120vh);
+  height: calc(140vh);
   float: left;
 } 
 

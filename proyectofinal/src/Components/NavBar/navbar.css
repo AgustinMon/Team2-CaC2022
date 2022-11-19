@@ -2,7 +2,6 @@ nav{
     height: var(--navbarheight);
 }
 
-
 .navbar-nav {
     justify-content: center;
     width: 100%;
@@ -43,7 +42,6 @@ nav{
         top: 0;
         background-color: var(--colorPrincipal) !important;
         border-radius: 2rem 2rem 0 2rem !important;
-
         cursor: pointer;
         transition: .5s;
     } 
@@ -59,3 +57,21 @@ nav{
  .navbar .form-group:hover svg {
         transform: rotate(-360deg);
     }
+
+.status-highlight{
+    border-bottom: 3px solid rgb(255, 78, 78);
+    color: #ffffff;
+}
+
+.status-highlight a{
+    color: #ffffff !important;
+}
+
+.status-idle{
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.status-idle a{
+    color : var(--colorSecundario);
+}

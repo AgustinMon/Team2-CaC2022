@@ -2,7 +2,7 @@
   "name": "proyectofinal",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://agustinmon.github.io/Team2-CaC2022/proyectofinal",
+  "homepage" : "https://agustinmon.github.io/Team2-CaC2022",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
