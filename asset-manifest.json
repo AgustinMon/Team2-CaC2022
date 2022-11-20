@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Team2-CaC2022/static/css/main.d2bad226.css",
-    "main.js": "/Team2-CaC2022/static/js/main.702933ea.js",
+    "main.css": "/Team2-CaC2022/static/css/main.45eb41ad.css",
+    "main.js": "/Team2-CaC2022/static/js/main.c52cb11d.js",
     "static/media/perspective_alpha_website_large.jpg": "/Team2-CaC2022/static/media/perspective_alpha_website_large.acb93a204432103acf9c.jpg",
     "static/media/logoipsum-250.svg": "/Team2-CaC2022/static/media/logoipsum-250.611858e8087cb4dfadb10045e939247c.svg",
     "index.html": "/Team2-CaC2022/index.html",
-    "main.d2bad226.css.map": "/Team2-CaC2022/static/css/main.d2bad226.css.map",
-    "main.702933ea.js.map": "/Team2-CaC2022/static/js/main.702933ea.js.map"
+    "main.45eb41ad.css.map": "/Team2-CaC2022/static/css/main.45eb41ad.css.map",
+    "main.c52cb11d.js.map": "/Team2-CaC2022/static/js/main.c52cb11d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2bad226.css",
-    "static/js/main.702933ea.js"
+    "static/css/main.45eb41ad.css",
+    "static/js/main.c52cb11d.js"
   ]
 }
