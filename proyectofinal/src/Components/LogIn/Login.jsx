@@ -1,6 +1,26 @@
+import {app} from '../../Services/Firebase';
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+
 import "./login.css";
 
 export const Login = () => {
+
+  const email = '';
+  const password = '';
+  /*const auth = getAuth(app);
+  const user = signInWithEmailAndPassword(auth, email, password)
+  .then((credentials) =>{
+    console.log(credentials);
+    const firebase_user = credentials.user;
+    // cargar user en contexto
+  })
+  .catch( (error)=> {
+    console.log(error.code);
+    console.log(error.message);
+  })*/
+
+  const user = ()=> true;
+  
   return (
     <>
       <div className="fondo">

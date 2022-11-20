@@ -1,11 +1,14 @@
-Version 0.1.0
+Version 0.2.0
+
+Buscador funcionando
+Implementacion de lenguaje parcial
+Firebase parcial
 
 Bugs conocidos
 
 Service: 
-    service genres.join linea 53
-    service getFilm() is not a function
-    buscar no esta funcionando
+    buscar ya funciona pero mejorar quitando busquedas menores a 4 letras
+    
     
 
 
