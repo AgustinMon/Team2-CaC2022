@@ -12,7 +12,7 @@ export default function NavBar(props) {
       <Container>
         <Navbar.Brand to="#home"><img alt="Logo" src={props.src} width={props.size} className="d-inline-block align-top"/></Navbar.Brand>
         <Nav className="me-auto">
-          <Link className="nav-link" to="/" activeClassname>Home</Link>
+          <Link className="nav-link" to="/Home" activeClassname>Home</Link>
           <Link className="nav-link" to="../Series">Series</Link>
           <Link className="nav-link" to="../Peliculas">Peliculas</Link>
           <Link className="nav-link" to="../LogIn">Login</Link>

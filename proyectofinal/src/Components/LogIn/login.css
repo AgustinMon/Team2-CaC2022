@@ -6,8 +6,9 @@
 
 .contenedor{
     margin: 0 auto 0 auto;
-    padding-top: 100px;
-    width: 90%;
+    background-color: rgba(0,0,0,.65);
+    padding: 100px;
+    width: 70%;
 }
 
 .formulario {
@@ -20,7 +21,7 @@
 }
 
 .input-email{
-    min-width: 500px;
+    width: 80%;
     height: 48px;
     border-radius: 10px;
     border: none;
@@ -29,4 +30,12 @@
 
 .formulario input{
     display:inline;
+}
+
+.error-signin{
+    margin-top:10px;
+    padding: 7px;
+    background-color: #550000;
+    color: white;
+    visibility: hidden;
 }
