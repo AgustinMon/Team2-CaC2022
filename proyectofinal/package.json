@@ -2,7 +2,7 @@
   "name": "proyectofinal",
   "version": "0.2.0",
   "private": true,
-  "homepage" : "https://agustinmon.github.io/Team2-CaC2022/",
+  "homepage": "https://agustinmon.github.io/Team2-CaC2022/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
+    "firebase": "^9.14.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
