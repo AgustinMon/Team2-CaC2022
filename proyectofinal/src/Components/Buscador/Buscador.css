@@ -18,11 +18,19 @@
 }
 
 .lupa {
+    display: flex;
+    position: relative;
     width:40px;
     height:40px;
     background-color: var(--colorPrincipal) !important;
     margin: 2px;
     border-radius: 50px !important;
-    box-shadow: 1px 1px 1px #000000;}
+    box-shadow: 1px 1px 1px #000000;
+    justify-content: center;
+    align-items: center
+}
+
 
   
+
+    

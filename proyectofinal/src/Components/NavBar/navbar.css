@@ -9,7 +9,6 @@ nav{
 
 .navbar-nav a {
     color : var(--colorSecundario);
-    /* font-weight: bold;  */
     font-size: 16px;
 }
 
@@ -22,11 +21,10 @@ nav{
 }
 
 .navbar .InputBuscador {
-    height: 37px;
+    height: 40px;
     outline: none;
     box-sizing: border-box;
-    width: 0;
-    padding: 0 20px;
+    width: 40px;
     color: #000;
     border-radius: 50px;
     font-size: 20px;
@@ -36,15 +34,18 @@ nav{
 } 
 
 .navbar .lupa {
-        height: 37px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-color: var(--colorPrincipal) !important;
-        border-radius: 2rem 2rem 0 2rem !important;
-        cursor: pointer;
-        transition: .5s;
+    width:40px;
+    height:40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--colorPrincipal) !important;
+    border-radius: 2rem 2rem 0 2rem !important;
+    cursor: pointer;
+    transition: .5s;
+    align-items: center;
     } 
+
 .navbar .lupa svg {
     transition: all .7s ease;
 }
