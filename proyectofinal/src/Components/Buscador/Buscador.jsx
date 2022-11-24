@@ -25,7 +25,9 @@ const [nombre, setNombre] = useState("");
           onChange={onInputChange}
           value={nombre}
         />
-        <Link to={"/buscar/"+nombre} className="lupa"><FontAwesomeIcon icon={faSearch} className="Icono" /></Link>{' '}
+        <div className="icono">
+          <Link to={"/buscar/" + nombre} className="lupa"><FontAwesomeIcon icon={faSearch} className="Icono" /></Link>{' '}
+          </div>
 
       </fieldset>
     </form>
