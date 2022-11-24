@@ -1,21 +1,24 @@
 import app from '../../Services/Firebase';
 import {useNavigate} from 'react-router-dom';
-import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+import {getAuth, signInWithEmailAndPassword, signInWithPopup, linkWithPopup} from 'firebase/auth';
+import {GoogleAuthProvider} from 'firebase/auth';
 
 import "./login.css";
 
 export const Login = () => {
  
+
+  const googleAuthProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
   const SignIn = (ev) => {
     ev.preventDefault();
     let email = ev.target[0].value;
     let password = ev.target[1].value;
-    Connect(email, password);
+    ConnectWithEmail(email, password);
   }
 
-  const Connect = (email, password)=>{
+  const ConnectWithEmail = (email, password)=>{
     const auth = getAuth(app);
     const user = signInWithEmailAndPassword(auth, email, password)
     .then((credentials) =>{
@@ -26,6 +29,19 @@ export const Login = () => {
     .then(()=>navigate(`/Home`))
     .catch( (error)=> {
       document.getElementById("error-signin").style.visibility = "visible";
+      console.log(error.code);
+      console.log(error.message);
+    })
+  }
+
+  const ConnectWithPopUp = (provider)=>{
+    const auth = getAuth(app);
+    const popUp = signInWithPopup(auth, provider)
+    .then((credentials)=>{
+      console.log("credentials ok", credentials);
+    })
+    .then(()=>navigate(`/Home`))
+    .catch((error)=>{
       console.log(error.code);
       console.log(error.message);
     })
@@ -46,6 +62,8 @@ export const Login = () => {
           <input type="submit" className="btn btn-danger btn-lg" value="Sign In"/>
           <p className='error-signin' id='error-signin'>Hay un error en el email o la contraseña.</p>
         </form>
+        <p><button className="btn btn-outline-light" onClick={()=>ConnectWithPopUp(googleAuthProvider)}>Sign In with Google</button></p>
+
         <p>TODO: Restablecer contraseña...</p>
         <p>TODO: Eliminar nav del login...</p>
         <br/><br/><br/><br/>
