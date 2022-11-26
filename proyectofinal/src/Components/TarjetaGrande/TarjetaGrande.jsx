@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 import {IMAGE_URL} from "../../Constants/constants"
-import { MainContext } from "../../Context/MainContext";
+import MainContext from "../../Context/MainContext";
 import { Service } from "../../Services/Service";
 import {Link} from "react-router-dom";
 

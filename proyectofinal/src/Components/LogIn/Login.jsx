@@ -10,10 +10,15 @@ import {
 import { GoogleAuthProvider } from "firebase/auth";
 
 import "./login.css";
+import { useContext } from "react";
+import MainContext from "../../Context/MainContext";
+import { LANGUAGES } from "../../Constants/languages";
 
 export const Login = () => {
   const googleAuthProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
+
+  const { language } = useContext(MainContext);
 
   const SignIn = (ev) => {
     ev.preventDefault();
@@ -115,16 +120,11 @@ export const Login = () => {
     <>
       <div className="fondo">
         <div className="contenedor">
-          <h1>Películas y series ilimitadas y mucho más</h1>
-          <h3>Disfruta donde quieras. Cancela cuando quieras.</h3>
-          <p>
-            Esta es una web que simula Netflix, no es real, no introduzcas datos
-            sensibles.
-          </p>
+          <h1>{LANGUAGES[language].LOGIN.TITLE}</h1>
+          <h3>{LANGUAGES[language].LOGIN.SUBTITLE}</h3>
+          <p>{LANGUAGES[language].LOGIN.DESCRIPTION}</p>
           <h2 className="mt-4">Ingrese</h2>
-          <p style={{ backgroundColor: "#005500" }}>
-            Prueba: team2@team2.com 123456
-          </p>
+          <p style={{ backgroundColor: "#005500" }}>{LANGUAGES[language].LOGIN.INPUT_EXAMPLE}</p>
           <form className="formulario" id="signin" onSubmit={SignIn}>
             <legend>
               <label>Email:</label>{" "}
@@ -132,11 +132,12 @@ export const Login = () => {
                 type="email"
                 className="input-email mt-2"
                 id="input-email"
+                placeholder={LANGUAGES[language].LOGIN.INPUT_PLACEHOLDER_EMAIL}
               />
             </legend>
             <legend>
               <label>Cotraseña:</label>{" "}
-              <input type="password" className="input-email mt-2" />
+              <input type="password" className="input-email mt-2" placeholder={LANGUAGES[language].LOGIN.INPUT_PLACEHOLDER_PASS}/>
             </legend>
             <input
               type="submit"
@@ -144,7 +145,7 @@ export const Login = () => {
               value="Sign In"
             />
             <span className="error signin" id="error-signin">
-              Hay un error en el email o la contraseña.
+              {LANGUAGES[language].LOGIN.INPUT_ERROR}
             </span>
           </form>
           <p>
@@ -152,21 +153,21 @@ export const Login = () => {
               className="btn btn-outline-light"
               onClick={() => ConnectWithPopUp(googleAuthProvider)}
             >
-              Sign In with Google
+              {LANGUAGES[language].LOGIN.GOOGLE}
             </button>
             <button
               className="btn btn-outline-light"
               onClick={ResetPassword}
               href="#"
             >
-              Restablecer contraseña
+              {LANGUAGES[language].LOGIN.RESTORE_PASS}
             </button>
           </p>
           <span className="error reset-password" id="error-reset-password">
-            Primero ingrese un email válido...
+            {LANGUAGES[language].LOGIN.MAIL_ERROR}
           </span>
           <span className="error email-sent" id="error-reset-sent">
-            Email enviado a su casilla de correo...
+            {LANGUAGES[language].LOGIN.MAIL_SUCCESS}
           </span>
           <br />
           <h2 className="mt-4">O Registrese</h2>

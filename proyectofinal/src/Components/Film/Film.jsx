@@ -1,19 +1,22 @@
 import React from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMAGE_URL } from "../../Constants/constants";
+import MainContext from "../../Context/MainContext";
 import { Service } from "../../Services/Service";
 import './film.css';
 
 export const Film = () => {
 
     const { movie_id } = useParams();
+    const { language, typeFilm } = useContext(MainContext);
     const [data, setData] = useState({});
 
     useEffect(() => {
         (async () => {
-            await Service.getFilm(movie_id)
+            await Service.getFilm(typeFilm, language, movie_id)
                 .then((obj) => {
                     setData(obj);
                     console.log("data from film", obj)
