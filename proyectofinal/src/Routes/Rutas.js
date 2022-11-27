@@ -6,14 +6,17 @@ import {NotFound} from '../Components/NotFound/NotFound';
 import {Login} from '../Components/LogIn/Login';
 import {Busqueda} from '../Components/Busqueda/Busqueda';
 import {Film} from '../Components/Film/Film';
+import { useContext } from "react";
+import MainContext from "../Context/MainContext";
 
 const Rutas = (props) => {
 
   const children = props.children;
+  const { user } = useContext(MainContext);
 
   return (
     <BrowserRouter>
-          {children}
+          {user && user != null? children : ""}
         <Routes>
           <Route exact path="/" element={<Login/>}/>
           <Route path="/Team2-CaC2022/" element={<Login/>}/>

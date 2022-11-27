@@ -18,7 +18,7 @@ export const Login = () => {
   const googleAuthProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
-  const { language } = useContext(MainContext);
+  const { language, user, changeUser } = useContext(MainContext);
 
   const SignIn = (ev) => {
     ev.preventDefault();
@@ -51,6 +51,7 @@ export const Login = () => {
         console.log("credentials OK", credentials);
         const firebase_user = credentials.user;
         // cargar user en contexto
+        changeUser(null, email);
       })
       .then(() => navigate(`/Home`))
       .catch((error) => {
@@ -65,6 +66,7 @@ export const Login = () => {
     const popUp = signInWithPopup(auth, provider)
       .then((credentials) => {
         console.log("credentials ok", credentials);
+        changeUser(null, "usuario");
       })
       .then(() => navigate(`/Home`))
       .catch((error) => {

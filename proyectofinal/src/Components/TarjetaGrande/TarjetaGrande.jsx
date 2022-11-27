@@ -19,7 +19,7 @@ const TarjetaGrande = () => {
                 .then((d)=> setData(d.results[0]))
                 .catch((error) => console.log(error))
             })()
-        },[]
+        },[typeFilm]
     )
 
     //reemplazar por llamada a una sola pelicula aleatoria

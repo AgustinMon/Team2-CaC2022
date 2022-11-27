@@ -21,7 +21,7 @@ export default function ListaHorizontal(props) {
         if (process.env.REACT_APP_ISDEBUG) console.log("d", d.results);
       });
     })();
-  }, []);
+  }, [typeFilm]);
 
 const fila = document.querySelector('#lista-' + props.id);
 

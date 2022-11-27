@@ -6,6 +6,7 @@ const MainProvider = ({ children }) => {
     const [language, setLanguage] = React.useState(LANG_ES);
     const [darkMode, setDarkMode] = React.useState(false);
     const [typeFilm, setTypeFilm] = React.useState(TIPO_PELICULA);
+    const [user, setUser] = React.useState(null);
 
     const currentState = JSON.parse(localStorage.getItem('state'));
 
@@ -34,8 +35,15 @@ const MainProvider = ({ children }) => {
         saveStorage();
     }
 
+    const changeUser = (e, user) => {
+        setUser(user);
+        currentState.user = user;
+        console.log('user: ', user);
+        saveStorage();
+    }
+
     return (
-        <MainContext.Provider value={{ language, changeLanguage, darkMode, toggleDarkMode, typeFilm, changeTypeFilm }}>
+        <MainContext.Provider value={{ language, changeLanguage, darkMode, toggleDarkMode, typeFilm, changeTypeFilm, user, changeUser }}>
             {children}
         </MainContext.Provider>
     )
