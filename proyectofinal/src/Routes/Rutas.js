@@ -16,7 +16,6 @@ const Rutas = (props) => {
 
   return (
     <BrowserRouter>
-          {user && user != null? children : ""}
         <Routes>
           <Route exact path="/" element={<Login/>}/>
           <Route path="/Team2-CaC2022/" element={<Login/>}/>
