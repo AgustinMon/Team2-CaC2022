@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import { Service } from '../../Services/Service';
 import Card from '../Card/Card';
 import Sidebar from '../Sidebar/Sidebar';
-import { MainContext } from "../../Context/MainContext";
+import MainContext from "../../Context/MainContext";
 import { useContext } from "react";
 
 export const Busqueda = () => {

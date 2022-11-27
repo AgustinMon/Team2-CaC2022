@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import TarjetaGrande from "../TarjetaGrande/TarjetaGrande";
 import { Login } from "../LogIn/Login";
 import ListaHorizontal from "../ListaHorizontal/ListaHorizontal";
-import { MainContext } from "../../Context/MainContext";
+import MainContext from "../../Context/MainContext";
+import Idioma from "../Idioma/Idioma";
 
 const Principal = () => {
 

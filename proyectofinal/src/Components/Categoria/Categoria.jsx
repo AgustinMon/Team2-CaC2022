@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import {Service} from '../../Services/Service';
 import Card from "../Card/Card";
-import { MainContext } from "../../Context/MainContext";
+import MainContext from "../../Context/MainContext";
 
 export const Categoria = () => {
     let { typeFilm, language } = useContext(MainContext);

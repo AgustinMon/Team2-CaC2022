@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Card from "../Card/Card";
 import "./ListaHorizontal.css";
-import { MainContext } from "../../Context/MainContext";
+import MainContext from "../../Context/MainContext";
 
 export default function ListaHorizontal(props) {
   let { typeFilm, language } = useContext(MainContext);

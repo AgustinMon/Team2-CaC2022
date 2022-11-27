@@ -3,5 +3,8 @@ export const CATEGORIAS = [{"id":28,"name":"Acción"},{"id":12,"name":"Aventura"
 export const APIKEY = process.env.REACT_APP_API_KEY;
 export const URL_BASE = 'https://api.themoviedb.org/3/';
 export const IMAGE_URL = 'https://image.tmdb.org/t/p/original/';
-export const LANG = 'es-ES';
-
+export const LANG_ES = 'es';
+export const LANG_EN = 'en';
+export const LANG_PT = 'pt';
+export const TIPO_PELICULA = 'movie';
+export const TIPO_SERIE = 'tv';
