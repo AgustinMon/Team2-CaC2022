@@ -6,8 +6,6 @@ import {NotFound} from '../Components/NotFound/NotFound';
 import {Login} from '../Components/LogIn/Login';
 import {Busqueda} from '../Components/Busqueda/Busqueda';
 import {Film} from '../Components/Film/Film';
-import { useContext } from "react";
-import MainContext from "../Context/MainContext";
 
 const Rutas = (props) => {
 
@@ -15,8 +13,9 @@ const Rutas = (props) => {
 
   return (
     <BrowserRouter>
-      {children}
+          {children}
         <Routes>
+          {/* cargar enlaces solo si el usuario esta registrado */}
           <Route exact path="/" element={<Login/>}/>
           <Route path="/Team2-CaC2022/" element={<Login/>}/>
           <Route exact path="/Home" element={<Principal/>}/>          

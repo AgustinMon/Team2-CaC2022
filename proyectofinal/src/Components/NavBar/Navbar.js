@@ -35,11 +35,10 @@ export default function NavBar(props) {
       <Container>
         <Navbar.Brand to="#home"><img alt="Logo" src={props.src} width={props.size} className="d-inline-block align-top"/></Navbar.Brand>
         <Nav className="me-auto">
-          <Link className="nav-link" to="/Home" activeClassname>{LANGUAGES[language].NAVBAR.HOME}</Link>
-
           {
             user?
             <>
+            <Link className="nav-link" to="/Home" activeClassname>{LANGUAGES[language].NAVBAR.HOME}</Link>
             <button className={typeFilm && typeFilm == TIPO_SERIE? "subrayado" : ""} onClick={setSeries}>{LANGUAGES[language].NAVBAR.SERIES}</button>
             <button className={typeFilm && typeFilm == TIPO_PELICULA? "subrayado" : ""} onClick={setFilms}>{LANGUAGES[language].NAVBAR.MOVIES}</button>
             <button onClick={logOut}>LogOut</button>
