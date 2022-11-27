@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Team2-CaC2022/static/css/main.6827b24a.css",
-    "main.js": "/Team2-CaC2022/static/js/main.8fd67660.js",
+    "main.css": "/Team2-CaC2022/static/css/main.52cc114e.css",
+    "main.js": "/Team2-CaC2022/static/js/main.a87ac980.js",
     "static/media/perspective_alpha_website_large.jpg": "/Team2-CaC2022/static/media/perspective_alpha_website_large.acb93a204432103acf9c.jpg",
     "static/media/logoipsum-250.svg": "/Team2-CaC2022/static/media/logoipsum-250.611858e8087cb4dfadb10045e939247c.svg",
     "index.html": "/Team2-CaC2022/index.html",
-    "main.6827b24a.css.map": "/Team2-CaC2022/static/css/main.6827b24a.css.map",
-    "main.8fd67660.js.map": "/Team2-CaC2022/static/js/main.8fd67660.js.map"
+    "main.52cc114e.css.map": "/Team2-CaC2022/static/css/main.52cc114e.css.map",
+    "main.a87ac980.js.map": "/Team2-CaC2022/static/js/main.a87ac980.js.map"
   },
   "entrypoints": [
-    "static/css/main.6827b24a.css",
-    "static/js/main.8fd67660.js"
+    "static/css/main.52cc114e.css",
+    "static/js/main.a87ac980.js"
   ]
 }
