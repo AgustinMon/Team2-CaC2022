@@ -12,10 +12,10 @@ import MainContext from "../Context/MainContext";
 const Rutas = (props) => {
 
   const children = props.children;
-  const { user } = useContext(MainContext);
 
   return (
     <BrowserRouter>
+      {children}
         <Routes>
           <Route exact path="/" element={<Login/>}/>
           <Route path="/Team2-CaC2022/" element={<Login/>}/>
