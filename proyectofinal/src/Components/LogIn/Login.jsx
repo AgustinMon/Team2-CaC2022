@@ -53,7 +53,8 @@ export const Login = () => {
         // cargar user en contexto
         changeUser(null, email);
       })
-      .then(() => navigate(`/Home`))
+      //.then(() => navigate(`/Home`))
+      .then(() => navigate(`/UserProfile`))
       .catch((error) => {
         document.getElementById("error-signin").style.visibility = "visible";
         console.log(error.code);
