@@ -125,11 +125,9 @@ export const Login = () => {
           <h1>{LANGUAGES[language].LOGIN.TITLE}</h1>
           <h3>{LANGUAGES[language].LOGIN.SUBTITLE}</h3>
           <p>{LANGUAGES[language].LOGIN.DESCRIPTION}</p>
-          <h2 className="mt-4">Ingrese</h2>
-          <p style={{ backgroundColor: "#005500" }}>{LANGUAGES[language].LOGIN.INPUT_EXAMPLE}</p>
           <form className="formulario" id="signin" onSubmit={SignIn}>
             <legend>
-              <label>Email:</label>{" "}
+              <label>{LANGUAGES[language].REGISTER.INPUT_USERNAME}:</label>{" "}
               <input
                 type="email"
                 className="input-email mt-2"
@@ -138,7 +136,7 @@ export const Login = () => {
               />
             </legend>
             <legend>
-              <label>Cotraseña:</label>{" "}
+              <label>{LANGUAGES[language].REGISTER.INPUT_PASS}:</label>{" "}
               <input type="password" className="input-email mt-2" placeholder={LANGUAGES[language].LOGIN.INPUT_PLACEHOLDER_PASS}/>
             </legend>
             <input
@@ -150,6 +148,7 @@ export const Login = () => {
               {LANGUAGES[language].LOGIN.INPUT_ERROR}
             </span>
           </form>
+          
           <p>
             <button
               className="btn btn-outline-light"
@@ -165,6 +164,7 @@ export const Login = () => {
               {LANGUAGES[language].LOGIN.RESTORE_PASS}
             </button>
           </p>
+          <p style={{ backgroundColor: "#005500" }}>{LANGUAGES[language].LOGIN.INPUT_EXAMPLE}</p>
           <span className="error reset-password" id="error-reset-password">
             {LANGUAGES[language].LOGIN.MAIL_ERROR}
           </span>
@@ -172,19 +172,23 @@ export const Login = () => {
             {LANGUAGES[language].LOGIN.MAIL_SUCCESS}
           </span>
           <br />
-          <h2 className="mt-4">O Registrese</h2>
+          <hr/>
+          <h2 className="mt-4">{LANGUAGES[language].REGISTER.HEADING_REGISTER}</h2>
           <form className="formulario" onSubmit={Register}>
             <legend>
-              <label>Email:</label>
-              <input type="email" className="input-email form-control-lg" />
+              <label>{LANGUAGES[language].REGISTER.INPUT_USERNAME} (email):</label>
+              <input type="email" className="input-email form-control-lg" 
+              placeholder={LANGUAGES[language].LOGIN.INPUT_PLACEHOLDER_EMAIL}
+              />
             </legend>
             <legend>
-              <label>Cotraseña:</label>
+              <label>{LANGUAGES[language].REGISTER.INPUT_PASS}:</label>
               <input
                 type="password"
                 className="input-email mt-2  form-control-lg"
+                placeholder={LANGUAGES[language].LOGIN.INPUT_PLACEHOLDER_PASS}
               />
-              <p>mínimo 6 caracteres.</p>
+              <p><small>{LANGUAGES[language].REGISTER.PASS_REQUIREMENTS}.</small></p>
             </legend>
             <span
               className="error password-invalido"
@@ -204,25 +208,26 @@ export const Login = () => {
             >
               Hay un error en este email.
             </span>
+            <hr/>
             <p style={{ backgroundColor: "#550000" }}>
               ---Por ahora solo email y contraseña es suficiente---
             </p>
             <legend>
               <label>Idioma:</label>
-              <input type="text" className="input-lang  form-control-lg" />
+              <input type="text" className="input-lang  form-control-lg"  placeholder="no habilitado"/>
             </legend>
             <legend>
               <label>Edad:</label>
-              <input type="text" className="input-edad  form-control-lg" />
+              <input type="text" className="input-edad  form-control-lg"  placeholder="no habilitado" />
             </legend>
             <legend>
               <label>Logo:</label>
-              <input type="text" className="input-logo  form-control-lg" />
+              <input type="text" className="input-logo  form-control-lg"  placeholder="no habilitado" />
             </legend>
             <input
               type="submit"
-              className="btn btn-danger btn-lg"
-              value="Regístrese"
+              className="btn btn-danger btn-lg mb-4"
+              value={LANGUAGES[language].REGISTER.HEADING_REGISTER}
             />
           </form>
         </div>

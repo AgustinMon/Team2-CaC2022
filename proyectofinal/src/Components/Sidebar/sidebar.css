@@ -2,12 +2,17 @@
   min-width: var(--anchosiderbar);
   background-color: var(--colorSidebar);
   color: var(--colorLetras);
-  height: calc(140vh);
+  min-height: calc(140vh);
   float: left;
+  position: relative;
 } 
 
 input{
   color: var(--letrasOscuras);
+}
+
+.sidebar ul{
+  margin-top: 40px;
 }
 
 .sidebar ul li a{
@@ -15,8 +20,8 @@ input{
   font-size: 1.2rem;
 }
 
-.sidebar ul{
-  margin-top: 40px;
+.sidebar ul li{
+  border-bottom: 1px solid gray;
 }
 
 .sidebar li:hover{
@@ -25,10 +30,10 @@ input{
 
 .desc-grupo{
   margin: 0;
-  width: 100%;
+  width: 90%;
   border-top: 1px solid #686868;
-  position: relative;
-  bottom: 10px;
+  position: absolute;
+  bottom: 0;
 }
 
 .desc-grupo p{

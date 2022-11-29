@@ -1,6 +1,6 @@
 .fondo{
     background-image: url(../../../public/images/perspective_alpha_website_large.jpg);
-    height: calc(100vh);
+    min-height: calc(100vh) !important;
     width: 100%;
 }
 

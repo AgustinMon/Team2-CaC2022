@@ -24,7 +24,7 @@ const Principal = () => {
                 if (process.env.REACT_APP_ISDEBUG) console.log("d",d.genres);
             });
         })()
-        },[]
+        },[typeFilm, language]
     )
 
     return (
@@ -32,7 +32,7 @@ const Principal = () => {
         {!process.env.REACT_APP_ISDEBUG 
             ? <Login/>
             : <>
-                <Sidebar/>
+                <Sidebar generos={generos}/>
                 <TarjetaGrande/>
                 <ListaHorizontal
                     id="1"
