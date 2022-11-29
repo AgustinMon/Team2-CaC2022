@@ -10,7 +10,8 @@
     padding-top: 10px !important;
     padding-left: 80px;
     padding-right: 80px;
-    width: 80%;
+    width: 60% !important;
+    min-height: calc(100vh);
 }
 
 .formulario {
@@ -32,8 +33,28 @@ label{
     display: block !important;
 }
 
-.contenedor h1, h3, p, input{
-    text-align: center;
+.contenedor h1{
+    text-align: center !important;
+}
+
+.contenedor h2{
+    text-align: center !important;
+}
+
+.contenedor h3{
+    text-align: center !important;
+}
+
+.contenedor p{
+    text-align: center !important;
+}
+
+.contenedor input{
+    text-align: center !important;
+}
+
+.contenedor h2, h3, p, input{
+    text-align: center !important;
 }
 
 .input-email{
@@ -88,10 +109,21 @@ label{
     visibility: hidden;
 }
 
+@media (max-width: 900px){
+    .contenedor{
+        padding: 10px;
+        width: 80% !important;
+    }
+    
+    .formulario {
+        width: 80%;
+    }
+}
+
 @media (max-width: 600px){
     .contenedor{
         padding: 10px;
-        width: 100%;
+        width: 100% !important;
     }
     
     .formulario {

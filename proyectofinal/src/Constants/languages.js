@@ -22,7 +22,7 @@ export const LANGUAGES = {
             INPUT_EMAIL: "Email",
             INPUT_PASS: "Password",
             INPUT_REPASS: "Re-enter your password",
-            PASS_REQUIREMENTS: "At least 6 characters"
+            PASS_REQUIREMENTS: "(At least 6 characters)"
         },
         NAVBAR: {
             MOVIES: "Movies",
@@ -33,6 +33,10 @@ export const LANGUAGES = {
             POPULAR: "Popular",
             TOP: "Top rated",
             RECENT: "Now playing"
+        },
+        NOTFOUND: {
+            TITLE: "Sorry, We didn't found it",
+            SUBTITLE: "But you may try this options"
         },
         OTHER: {
             WATCH_NOW: "Watch now",
@@ -54,14 +58,14 @@ export const LANGUAGES = {
             MAIL_SUCCESS: "Email enviado a su casilla de correo...",
         },
         REGISTER: {
-            HEADING_REGISTER: "Registro",
+            HEADING_REGISTER: "Registrarse",
             INPUT_USERNAME: "Nombre de usuario",
             INPUT_NAME: "Nombre",
             INPUT_LASTNAME: "Apellido",
             INPUT_EMAIL: "Correo electronico",
             INPUT_PASS: "Contraseña",
             INPUT_REPASS: "Re-ingrese su contraseña",
-            PASS_REQUIREMENTS: "Mínimo 6 caracteres"
+            PASS_REQUIREMENTS: "(Mínimo 6 caracteres)"
         },
         NAVBAR: {
             MOVIES: "Películas",
@@ -72,6 +76,10 @@ export const LANGUAGES = {
             POPULAR: "Populares",
             TOP: "Top más votados",
             RECENT: "Recientes"
+        },
+        NOTFOUND: {
+            TITLE: "Oops, No lo encontramos",
+            SUBTITLE: "pero podes probar estas categorias"
         },
         OTHER: {
             WATCH_NOW: "Ver ahora",
