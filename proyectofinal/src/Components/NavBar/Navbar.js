@@ -15,44 +15,45 @@ import { TIPO_PELICULA, TIPO_SERIE } from "../../Constants/constants";
 export default function NavBar(props) {
 
   const { language, user, changeUser, typeFilm, changeTypeFilm } = useContext(MainContext);
+  console.log("user from busqueda", user);
   const navigate = useNavigate();
 
-  const logOut = (e)=>{
+  const logOut = (e) => {
     changeUser(e, null);
     navigate('/Login');
   }
 
-  const setFilms = (e)=>{
+  const setFilms = (e) => {
     changeTypeFilm(e, TIPO_PELICULA);
   }
 
-  const setSeries = (e)=>{
+  const setSeries = (e) => {
     changeTypeFilm(e, TIPO_SERIE);
   }
 
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand to="#home"><img alt="Logo" src={props.src} width={props.size} className="d-inline-block align-top"/></Navbar.Brand>
+        <Navbar.Brand to="#home"><img alt="Logo" src={props.src} width={props.size} className="d-inline-block align-top" /></Navbar.Brand>
         <Nav className="me-auto">
           {
-            user?
-            <>
-            <Link className="nav-link" to="/Home" activeClassname>{LANGUAGES[language].NAVBAR.HOME}</Link>
-            <button className={typeFilm && typeFilm == TIPO_SERIE? "subrayado" : ""} onClick={setSeries}>{LANGUAGES[language].NAVBAR.SERIES}</button>
-            <button className={typeFilm && typeFilm == TIPO_PELICULA? "subrayado" : ""} onClick={setFilms}>{LANGUAGES[language].NAVBAR.MOVIES}</button>
-            <button onClick={logOut}>LogOut</button>
-            </>
-            :
-            <Link className="nav-link" to="../LogIn">{LANGUAGES[language].LOGIN.HEADING_LOGIN}</Link>
+            user ?
+              <>
+                <Link className="nav-link" to="/Home" activeClassname>{LANGUAGES[language].NAVBAR.HOME}</Link>
+                <button className={typeFilm && typeFilm == TIPO_SERIE ? "subrayado" : ""} onClick={setSeries}>{LANGUAGES[language].NAVBAR.SERIES}</button>
+                <button className={typeFilm && typeFilm == TIPO_PELICULA ? "subrayado" : ""} onClick={setFilms}>{LANGUAGES[language].NAVBAR.MOVIES}</button>
+                <button onClick={logOut}>LogOut</button>
+              </>
+              :
+              <Link className="nav-link" to="../LogIn">{LANGUAGES[language].LOGIN.HEADING_LOGIN}</Link>
           }
-          
+
         </Nav>
         <ButtonGroup className="buttonGroup">
-        <Buscador />
-          </ButtonGroup>
-          <Idioma></Idioma>
-          <Button type="submit" className="Login">{user? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}</Button>{' '}  
+          <Buscador />
+        </ButtonGroup>
+        <Idioma></Idioma>
+        <Button type="submit" className="Login">{user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}</Button>{' '}
       </Container>
     </Navbar>
   );

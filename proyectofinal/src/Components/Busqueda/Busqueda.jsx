@@ -25,7 +25,7 @@ export const Busqueda = () => {
                     .catch((error)=> console.log(error))
                 }
             )()
-        },[palabra]
+        },[palabra,typeFilm, language]
     )
 
     const buscarGenero = (id) => {
@@ -34,7 +34,7 @@ export const Busqueda = () => {
 
     return (
         <>
-        <Sidebar/>
+        <Sidebar generos={generos}/>
         <h2>Resultados para: {palabra}</h2>
         
         <div className="contenedor-peliculas">

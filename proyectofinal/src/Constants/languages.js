@@ -22,6 +22,7 @@ export const LANGUAGES = {
             INPUT_EMAIL: "Email",
             INPUT_PASS: "Password",
             INPUT_REPASS: "Re-enter your password",
+            PASS_REQUIREMENTS: "At least 6 characters"
         },
         NAVBAR: {
             MOVIES: "Movies",
@@ -60,6 +61,7 @@ export const LANGUAGES = {
             INPUT_EMAIL: "Correo electronico",
             INPUT_PASS: "Contraseña",
             INPUT_REPASS: "Re-ingrese su contraseña",
+            PASS_REQUIREMENTS: "Mínimo 6 caracteres"
         },
         NAVBAR: {
             MOVIES: "Películas",

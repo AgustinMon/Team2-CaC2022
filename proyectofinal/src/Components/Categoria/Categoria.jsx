@@ -30,7 +30,7 @@ export const Categoria = () => {
             })
             .catch((error)=>{console.log("error from generos", error)})
         })()
-    },[Catid])
+    },[Catid, typeFilm, language])
 
     const buscarGenero = (id) => {
         return generos?.filter((genero) => genero.id === id)[0] || {};
@@ -38,7 +38,7 @@ export const Categoria = () => {
 
     return (
         <>
-        <Sidebar/>
+        <Sidebar generos={generos}/>
         {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''}
         {generos?.map((element)=> element.id == Catid? <h1>{element.name}</h1> : '')}
         <div className="contenedor-peliculas">
