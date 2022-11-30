@@ -6,6 +6,7 @@ import {NotFound} from '../Components/NotFound/NotFound';
 import {Login} from '../Components/LogIn/Login';
 import {Busqueda} from '../Components/Busqueda/Busqueda';
 import {Film} from '../Components/Film/Film';
+import Perfiles from '../Components/Perfiles/Perfiles';
 
 const Rutas = (props) => {
 
@@ -23,6 +24,7 @@ const Rutas = (props) => {
           <Route path="/buscar/:palabra" element={<Busqueda/>}/>
           <Route path="/Category/:Catid" element={<Categoria/>}/>
           <Route path="/View/:movie_id" element={<Film/>}/>
+          <Route path="/profiles" element={<Perfiles/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
     </BrowserRouter>

@@ -1,0 +1,36 @@
+
+.perfil_imagen {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.perfil_imagen_hover {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    outline: 3px solid white;
+}
+
+.nombre_perfil_hover {
+    font-size: 25px;
+    margin: 10px auto;
+    color: white;
+}
+
+.nombre_perfil {
+    font-size: 25px;
+    margin: 10px auto;
+    color: #616161;
+}
+
+.perfil_tarjeta:hover {
+    cursor: pointer;
+}
+
+.edit_pencil {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 66px;
+    border-radius: 8px;
+}
