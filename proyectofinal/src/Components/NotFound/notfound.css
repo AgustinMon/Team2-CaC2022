@@ -1,20 +1,20 @@
-.fondo{
-    background-image: url(../../../public/images/perspective_alpha_website_large.jpg);
-    min-height: calc(100vh) !important;
-    width: 100%;
+.notfound-list{
+    display: grid;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
-.contenedor{
-    margin: 0 auto 0 auto;
-    padding-top: 100px;
-    width: 90%;
-}
-
-.formulario {
-    margin: 0 auto 0 auto;
+.notfound-list li{
     width: 80%;
 }
 
-.contenedor h1, h2, h3, p, input{
-    text-align: center !important;
+.notfound-list li a{
+    text-decoration: none;
+}
+
+.notfound-list li:hover{
+    background-color: gray;
 }
