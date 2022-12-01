@@ -24,7 +24,7 @@ const Rutas = (props) => {
           <Route path="/buscar/:palabra" element={<Busqueda/>}/>
           <Route path="/Category/:Catid" element={<Categoria/>}/>
           <Route path="/View/:movie_id" element={<Film/>}/>
-          <Route path="/profiles" element={<Perfiles/>}/>
+          <Route path="/Perfiles" element={<Perfiles/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
     </BrowserRouter>
