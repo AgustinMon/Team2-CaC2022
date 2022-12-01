@@ -54,7 +54,7 @@ export const Login = () => {
         changeUser(null, email);
       })
       //.then(() => navigate(`/Home`))
-      .then(() => navigate(`/UserProfile`))
+      .then(() => navigate(`/Perfiles`))
       .catch((error) => {
         document.getElementById("error-signin").style.visibility = "visible";
         console.log(error.code);
