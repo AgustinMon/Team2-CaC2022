@@ -1,4 +1,4 @@
-import { getFirestore, collection, addDoc, query, getDocs, where } from "firebase/firestore";
+import { getFirestore, collection, addDoc, query, getDoc, getDocs, where, doc } from "firebase/firestore";
 import { UserProfileModel } from "../Models/UserProfileModel";
 import app from "./Firebase";
 
@@ -6,7 +6,7 @@ import app from "./Firebase";
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
-
+console.log("db", db);
 const user = UserProfileModel;
 
 user.age = 21;
@@ -15,24 +15,37 @@ user.logo = 2;
 
 const getDataById = async (userId) => {
   user.userId = userId;
-  console.log("userId in getDataById", userId);
-
-    const doc = collection(db, "FakeFlix-Users");
-    const q = query(doc, where("userId", "==", userId));
-    
-    const querySnapshot = await getDocs(q);
-    console.log("querySnapshot",querySnapshot);
-    querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
+  const doc = collection(db, "FakeFlix-Users");
+  const q = query(doc, where("userId", "==", userId));
+  await getDocs(q)
+    .then((data) => {
+      data.forEach((d) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(d.id, " => ", d.data());
+      })
     });
+}
+
+const getAllData = async (userId) => {
+  user.userId = userId;
+  const doc = collection(db, "FakeFlix-Users");
+  await getDocs(doc)
+    .then((data) => {
+      console.log("querySnapshot 2", data)
+      data.forEach((d) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(d.id, " => ", d.data());
+      })
+    });
+
 }
 
 const addElement = async (userId) => {
   user.userId = userId;
+  const data = JSON.stringify(user);
   try {
     const docRef = await addDoc(collection(db, "FakeFlix-Users"), {
-      user
+      ...user
     });
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
