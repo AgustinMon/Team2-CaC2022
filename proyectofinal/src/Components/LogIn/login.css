@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+.form-select * {
+    color: #2e2e2e !important;
+}
+
 legend {
     clear: both;
     display: block;

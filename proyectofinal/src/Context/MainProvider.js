@@ -43,7 +43,7 @@ const MainProvider = ({ children }) => {
     }
 
     return (
-        <MainContext.Provider value={{ language, changeLanguage, darkMode, toggleDarkMode, typeFilm, changeTypeFilm, user, changeUser }}>
+        <MainContext.Provider value={{ language, changeLanguage, darkMode, toggleDarkMode, typeFilm, changeTypeFilm, user, changeUser, setDarkMode }}>
             {children}
         </MainContext.Provider>
     )

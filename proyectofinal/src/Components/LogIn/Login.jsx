@@ -1,5 +1,7 @@
 import app from "../../Services/Firebase";
 import { useNavigate } from "react-router-dom";
+import {UserProfileModel} from "../../Models/UserProfileModel";
+import { addElement } from "../../Services/Firestore";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -18,7 +20,7 @@ export const Login = () => {
   const googleAuthProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
-  const { language, user, changeUser } = useContext(MainContext);
+  const { language, changeLanguage, changeUser, setDarkMode } = useContext(MainContext);
 
   const SignIn = (ev) => {
     ev.preventDefault();
@@ -35,11 +37,15 @@ export const Login = () => {
     document.getElementById("error-register-email-invalido").style.visibility =
       "hidden";
     ev.preventDefault();
+    // new user toma la estructura del modelo
+    console.log("event", ev);
     const newUser = {
       email: ev.target[0].value,
       password: ev.target[1].value,
-      lang: ev.target[2].value,
-      logo: ev.target[3].value,
+      nombre: ev.target[2].value,
+      lang: ev.target[3].value,
+      edad: ev.target[4].value,
+      logo: ev.target[5].value,
     };
     ConnectAndRegister(newUser);
   };
@@ -53,7 +59,6 @@ export const Login = () => {
         // cargar user en contexto
         changeUser(null, email);
       })
-      //.then(() => navigate(`/Home`))
       .then(() => navigate(`/Perfiles`))
       .catch((error) => {
         document.getElementById("error-signin").style.visibility = "visible";
@@ -80,7 +85,24 @@ export const Login = () => {
     const auth = getAuth(app);
     createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
       .then(() => {
-        // cargar user en contexto
+        // una vez creado el user en Auth, agregamos el perfil en Firestore
+        // new user toma la estructura del modelo
+        const newUserProfile = UserProfileModel;
+        newUserProfile.userId = newUser.email;
+        newUserProfile.language = newUser.lang;
+        newUserProfile.profiles[0].name = newUser.nombre
+        newUserProfile.profiles[0].age = newUser.edad
+        newUserProfile.profiles[0].logo = newUser.logo
+        addElement(newUserProfile)
+        .then(
+          // crear context y salir de login
+          () => {
+            changeUser(null, newUserProfile.userId);
+            changeLanguage(null, newUserProfile.language);
+            setDarkMode(true);
+            navigate(`/Perfiles`);
+          }
+        )
       })
       .catch((error) => {
         console.log(error.code);
@@ -209,21 +231,31 @@ export const Login = () => {
             >
               Hay un error en este email.
             </span>
-            <hr/>
-            <p style={{ backgroundColor: "#550000" }}>
-              ---Por ahora solo email y contraseña es suficiente---
-            </p>
+            <legend>
+              <label>{LANGUAGES[language].REGISTER.INPUT_NAME}:</label>
+              <input type="text" size="15" className="input-email form-control-lg" 
+              placeholder={LANGUAGES[language].REGISTER.INPUT_NAME_PLACEHOLDER}
+              />
+            </legend>
             <legend>
               <label>Idioma:</label>
-              <input type="text" className="input-lang  form-control-lg"  placeholder="no habilitado"/>
+              <select className="form-select form-select-lg text-dark" name="language" id="setLang">
+                <option value="es">Español</option>
+                <option value="en">Ingles</option>
+              </select>
             </legend>
             <legend>
               <label>Edad:</label>
-              <input type="text" className="input-edad  form-control-lg"  placeholder="no habilitado" />
+              <input type="number" min="0" max="100" className="input-edad  form-control-lg"  placeholder="Indique edad" />
             </legend>
             <legend>
               <label>Logo:</label>
-              <input type="text" className="input-logo  form-control-lg"  placeholder="no habilitado" />
+              <select className="form-select form-select-lg" name="logo" id="setlogo">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
             </legend>
             <input
               type="submit"

@@ -6,17 +6,20 @@ export const UserProfileModel = {
         {
             name : "Maria",
             logo : 1,
-            age : 18
+            age : 18,
+            viewmode: "dark"
         },
         {
-            name : "Pepe",
+            name : "?",
             logo : 2,
-            age : 13
+            age : -1,
+            viewmode: "dark"
         },   
         {
-            name : "Juan",
+            name : "?",
             logo : 3,
-            age : 16
+            age : -1,
+            viewmode: "dark"
         }
     ],
     viewedlist : ""

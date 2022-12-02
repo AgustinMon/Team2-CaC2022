@@ -9,10 +9,6 @@ const db = getFirestore(app);
 console.log("db", db);
 const user = UserProfileModel;
 
-user.age = 21;
-user.language = 'en';
-user.logo = 2;
-
 const getDataById = async (userId) => {
   user.userId = userId;
   const doc = collection(db, "FakeFlix-Users");
@@ -40,13 +36,21 @@ const getAllData = async (userId) => {
 
 }
 
-const addElement = async (userId) => {
-  user.userId = userId;
-  const data = JSON.stringify(user);
+const updateElement = async ()=>{
+  // TODO
+}
+
+const addElement = async (user) => {
+  /* requiere un objeto user cumpliendo con la estructura de 
+  Models/UserProfileModel
+  no es necesario completar todos los campos del objeto ya que estan 
+  pre seteados. el objeto user modifica solo los campos que necesiten ser modificados
+  esta funcion NO es UPDATE de un campo existente
+  */
   try {
     const docRef = await addDoc(collection(db, "FakeFlix-Users"), {
       ...user
-    });
+    })
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
