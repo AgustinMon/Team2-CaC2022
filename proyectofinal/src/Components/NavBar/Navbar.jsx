@@ -32,7 +32,7 @@ export default function NavBar(props) {
   };
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar darkmode={`${darkMode}`} bg="dark" variant="dark">
       <Container>
         <Navbar.Brand to="#home">
           <img

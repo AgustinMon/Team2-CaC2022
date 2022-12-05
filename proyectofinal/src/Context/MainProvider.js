@@ -24,7 +24,6 @@ const MainProvider = ({ children }) => {
         setDarkMode(darkMode);
         currentState.darkMode = darkMode;
         console.log('dark mode: ' + darkMode);
-
         saveStorage();
     }
 

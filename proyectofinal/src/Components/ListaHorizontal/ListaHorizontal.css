@@ -2,6 +2,10 @@
 	text-align: start;
 }
 
+.titulo_lista[darkmode="false"]{
+	color: rgb(59, 59, 59);
+}
+
 .contenedor_lista {
     padding-bottom: 30px;
 	padding-left: 30px;

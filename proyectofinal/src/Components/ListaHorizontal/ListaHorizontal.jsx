@@ -4,7 +4,7 @@ import "./ListaHorizontal.css";
 import MainContext from "../../Context/MainContext";
 
 export default function ListaHorizontal(props) {
-  let { typeFilm, language } = useContext(MainContext);
+  let { typeFilm, language, darkMode } = useContext(MainContext);
 
   const [data, setData] = useState([]);
 
@@ -34,8 +34,8 @@ const moverIzquierda = () => {
 };
 
   return (
-    <div className="contenedor_lista">
-      <h3 className="titulo_lista">{props.tipo}</h3>
+    <div className="contenedor_lista" darkmode = {`${darkMode}`}>
+      <h3 className="titulo_lista" darkmode = {`${darkMode}`}>{props.tipo}</h3>
       <button role="button" id="flecha-izquierda" className="flecha-izquierda" onClick={moverIzquierda}>
         <i className="fas fa-angle-left"></i>
       </button>

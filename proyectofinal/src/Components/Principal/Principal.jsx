@@ -11,7 +11,7 @@ import Idioma from "../Idioma/Idioma";
 
 const Principal = () => {
 
-    let { typeFilm, language } = useContext(MainContext);
+    let { typeFilm, language, darkMode } = useContext(MainContext);
     const [generos, setGeneros] = useState([]);
 
     useEffect(()=>{
