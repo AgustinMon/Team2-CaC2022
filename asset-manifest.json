@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Team2-CaC2022/static/css/main.9c4262e7.css",
-    "main.js": "/Team2-CaC2022/static/js/main.a55fe13b.js",
+    "main.css": "/Team2-CaC2022/static/css/main.e427b809.css",
+    "main.js": "/Team2-CaC2022/static/js/main.c378ba72.js",
     "static/media/perspective_alpha_website_large.jpg": "/Team2-CaC2022/static/media/perspective_alpha_website_large.acb93a204432103acf9c.jpg",
-    "static/media/logoipsum-250.svg": "/Team2-CaC2022/static/media/logoipsum-250.611858e8087cb4dfadb10045e939247c.svg",
+    "static/media/Fakeflix_logo.png": "/Team2-CaC2022/static/media/Fakeflix_logo.daae8477f8e9dc9230ba.png",
     "index.html": "/Team2-CaC2022/index.html",
-    "main.9c4262e7.css.map": "/Team2-CaC2022/static/css/main.9c4262e7.css.map",
-    "main.a55fe13b.js.map": "/Team2-CaC2022/static/js/main.a55fe13b.js.map"
+    "main.e427b809.css.map": "/Team2-CaC2022/static/css/main.e427b809.css.map",
+    "main.c378ba72.js.map": "/Team2-CaC2022/static/js/main.c378ba72.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c4262e7.css",
-    "static/js/main.a55fe13b.js"
+    "static/css/main.e427b809.css",
+    "static/js/main.c378ba72.js"
   ]
 }
