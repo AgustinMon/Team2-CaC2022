@@ -1,7 +1,10 @@
 :root{
+  --bodydark:#202020;
+  --bodylight: #ffffff;
   --colorFondo : #000000;
   --colorLetras : #ffffff;
   --colorSidebar : #464646;
+  --colorSidebarClaro : #ababab;
   --letrasOscuras: #303030; 
   --navbarheight: 60px;
   --colorPrincipal: #4845d2;
@@ -17,11 +20,15 @@ ul li {
   list-style-type: none;
 }
 
-body {
+.App {
   /* hace override al blanco de boostrap 
   luego quitar con el nightmode */
-  background-color: #202020 !important;
+  background-color: var(--bodydark) !important;
   margin: 0;
+}
+
+.App[darkmode = "false"]{
+  background-color: var(--bodylight) !important;
 }
 
 .peliculas{

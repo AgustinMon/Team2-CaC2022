@@ -4,7 +4,7 @@ import { LANG_ES, TIPO_PELICULA } from '../Constants/constants';
 
 const MainProvider = ({ children }) => {
     const [language, setLanguage] = React.useState(LANG_ES);
-    const [darkMode, setDarkMode] = React.useState(false);
+    const [darkMode, setDarkMode] = React.useState(true);
     const [typeFilm, setTypeFilm] = React.useState(TIPO_PELICULA);
     const [user, setUser] = React.useState(null);
 
@@ -24,7 +24,6 @@ const MainProvider = ({ children }) => {
         setDarkMode(darkMode);
         currentState.darkMode = darkMode;
         console.log('dark mode: ' + darkMode);
-
         saveStorage();
     }
 

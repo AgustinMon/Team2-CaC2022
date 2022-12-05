@@ -13,7 +13,7 @@ import { LANGUAGES } from "../../Constants/languages";
 import { TIPO_PELICULA, TIPO_SERIE } from "../../Constants/constants";
 
 export default function NavBar(props) {
-  const { language, user, changeUser, typeFilm, changeTypeFilm } =
+  const { language, user, changeUser, typeFilm, changeTypeFilm, darkMode } =
     useContext(MainContext);
   console.log("user from busqueda", user);
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export default function NavBar(props) {
   };
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar darkmode={`${darkMode}`} bg="dark" variant="dark">
       <Container>
         <Navbar.Brand to="#home">
           <img
