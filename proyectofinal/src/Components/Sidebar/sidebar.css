@@ -13,6 +13,11 @@
   color: var(--letrasOscuras)!important;
 }
 
+.sidebar[darkmode=true]{
+  background-color: var(--colorLetras);
+  color: var(--letrasOscuras) !important;
+}
+
 input{
   color: var(--letrasOscuras);
 }

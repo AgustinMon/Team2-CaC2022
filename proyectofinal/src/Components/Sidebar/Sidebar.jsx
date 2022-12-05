@@ -3,12 +3,12 @@ import { useContext, useCallback } from 'react';
 import { CATEGORIAS } from '../../Constants/constants';
 import { Buscador } from '../Buscador/Buscador';
 import { Link } from "react-router-dom";
+import { useContext } from 'react';
 import MainContext from "../../Context/MainContext";
 
 const Sidebar = (props) => {
 
     const { darkMode, toggleDarkMode } = useContext(MainContext);
-
     return (
         <>
             <aside darkmode ={`${darkMode}`} className="sidebar p-4">
