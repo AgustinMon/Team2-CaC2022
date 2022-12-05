@@ -2,7 +2,7 @@ import './App.css';
 import Rutas from './Routes/Rutas';
 import NavBar from './Components/NavBar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from'./Components/NavBar/logoipsum-250.svg'
+import logo from'../src/Assets/Fakeflix_logo.png'
 import MainProvider from './Context/MainProvider';
 
 function App() {

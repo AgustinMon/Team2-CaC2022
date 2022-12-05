@@ -13,7 +13,7 @@ import { LANGUAGES } from "../../Constants/languages";
 import { TIPO_PELICULA, TIPO_SERIE } from "../../Constants/constants";
 
 export default function NavBar(props) {
-  const { language, user, changeUser, typeFilm, changeTypeFilm } =
+  const { language, user, changeUser, typeFilm, changeTypeFilm, darkMode } =
     useContext(MainContext);
   console.log("user from busqueda", user);
   const navigate = useNavigate();
