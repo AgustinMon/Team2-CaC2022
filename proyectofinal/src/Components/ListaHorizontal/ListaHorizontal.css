@@ -33,7 +33,7 @@
 }
 
 .contenedor_lista .flecha-izquierda {
-	left: 0;
+	left: 20px;
 }
 
 .contenedor_lista .flecha-derecha {
@@ -47,7 +47,7 @@
 
 .lista {
 	width: 100%;
-	padding: 8px 0;
+	padding: 8px 25px;
 	overflow: hidden;
 	scroll-behavior: smooth;
 }

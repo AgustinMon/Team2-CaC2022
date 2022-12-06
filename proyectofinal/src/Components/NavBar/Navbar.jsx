@@ -75,7 +75,7 @@ export default function NavBar(props) {
         <ButtonGroup className="buttonGroup">
           <Buscador />
         </ButtonGroup>
-        <Idioma></Idioma>
+        {!user && <Idioma></Idioma>}
         <Button type="submit" className="Login">
           {user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}
         </Button>{" "}

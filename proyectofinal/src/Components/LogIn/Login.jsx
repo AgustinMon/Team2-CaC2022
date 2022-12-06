@@ -20,7 +20,7 @@ export const Login = () => {
   const googleAuthProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
-  const { language, changeLanguage, changeUser, setDarkMode } = useContext(MainContext);
+  const { language, changeLanguage, changeUser,toggleDarkMode } = useContext(MainContext);
 
   const SignIn = (ev) => {
     ev.preventDefault();
@@ -42,10 +42,10 @@ export const Login = () => {
     const newUser = {
       email: ev.target[0].value,
       password: ev.target[1].value,
-      nombre: ev.target[2].value,
-      lang: ev.target[3].value,
-      edad: ev.target[4].value,
-      logo: ev.target[5].value,
+      // nombre: ev.target[2].value,
+      // lang: ev.target[3].value,
+      // edad: ev.target[4].value,
+      // logo: ev.target[5].value,
     };
     ConnectAndRegister(newUser);
   };
@@ -55,9 +55,9 @@ export const Login = () => {
     const user = signInWithEmailAndPassword(auth, email, password)
       .then((credentials) => {
         console.log("credentials OK", credentials);
-        const firebase_user = credentials.user;
+        const firebase_user = credentials.user.uid;
         // cargar user en contexto
-        changeUser(null, email);
+        changeUser(null, firebase_user);
       })
       .then(() => navigate(`/Perfiles`))
       .catch((error) => {
@@ -84,22 +84,23 @@ export const Login = () => {
   const ConnectAndRegister = (newUser) => {
     const auth = getAuth(app);
     createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
-      .then(() => {
+      .then((userCredential) => {
         // una vez creado el user en Auth, agregamos el perfil en Firestore
         // new user toma la estructura del modelo
         const newUserProfile = UserProfileModel;
-        newUserProfile.userId = newUser.email;
-        newUserProfile.language = newUser.lang;
-        newUserProfile.profiles[0].name = newUser.nombre
-        newUserProfile.profiles[0].age = newUser.edad
-        newUserProfile.profiles[0].logo = newUser.logo
+        newUserProfile.userId = userCredential.user.uid;
+        newUserProfile.profiles = [];
+        // newUserProfile.language = newUser.lang;
+        // newUserProfile.profiles[0].name = newUser.nombre
+        // newUserProfile.profiles[0].age = newUser.edad
+        // newUserProfile.profiles[0].logo = newUser.logo
         addElement(newUserProfile)
         .then(
           // crear context y salir de login
           () => {
             changeUser(null, newUserProfile.userId);
-            changeLanguage(null, newUserProfile.language);
-            setDarkMode(true);
+            // changeLanguage(null, newUserProfile.language);
+            toggleDarkMode(true);
             navigate(`/Perfiles`);
           }
         )
@@ -231,7 +232,7 @@ export const Login = () => {
             >
               Hay un error en este email.
             </span>
-            <legend>
+            {/* <legend>
               <label>{LANGUAGES[language].REGISTER.INPUT_NAME}:</label>
               <input type="text" size="15" className="input-email form-control-lg" 
               placeholder={LANGUAGES[language].REGISTER.INPUT_NAME_PLACEHOLDER}
@@ -256,7 +257,7 @@ export const Login = () => {
                 <option value="3">3</option>
                 <option value="4">4</option>
               </select>
-            </legend>
+            </legend> */}
             <input
               type="submit"
               className="btn btn-danger btn-lg mb-4"

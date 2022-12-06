@@ -24,6 +24,10 @@
     color: #616161;
 }
 
+.perfil_tarjeta {
+    margin: 0 15px;
+}
+
 .perfil_tarjeta:hover {
     cursor: pointer;
 }
@@ -32,5 +36,10 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 66px;
+    border-radius: 8px;
+}
+
+.base_tarjeta {
+    background-color: white;
     border-radius: 8px;
 }
