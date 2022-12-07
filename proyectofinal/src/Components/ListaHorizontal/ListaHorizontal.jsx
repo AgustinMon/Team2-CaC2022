@@ -26,11 +26,11 @@ export default function ListaHorizontal(props) {
 const fila = document.querySelector('#lista-' + props.id);
 
 const moverDerecha = () => {
-	fila.scrollLeft += fila.offsetWidth - 30;
+	fila.scrollLeft += fila.offsetWidth - 70;
 };
 
 const moverIzquierda = () => {
-	fila.scrollLeft -= fila.offsetWidth + 30;
+	fila.scrollLeft -= fila.offsetWidth - 70;
 };
 
   return (

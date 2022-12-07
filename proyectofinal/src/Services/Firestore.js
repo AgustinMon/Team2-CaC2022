@@ -1,4 +1,4 @@
-import { getFirestore, collection, addDoc, query, getDoc, getDocs, where, doc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, query, getDoc, getDocs, where, doc, updateDoc, FieldValue } from "firebase/firestore";
 import { UserProfileModel } from "../Models/UserProfileModel";
 import app from "./Firebase";
 
@@ -7,46 +7,49 @@ import app from "./Firebase";
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 console.log("db", db);
-const user = UserProfileModel;
+const user = new UserProfileModel();
 
 const getDataById = async (userId) => {
-  user.userId = userId;
   const doc = collection(db, "FakeFlix-Users");
   const q = query(doc, where("userId", "==", userId));
   await getDocs(q)
     .then((data) => {
       data.forEach((d) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(d.id, " => ", d.data());
+        user.userId = d.data().userId;
+        user.profiles = d.data().profiles;
       })
     });
+  return user;
 }
 
-const getAllData = async (userId) => {
-  user.userId = userId;
-  const doc = collection(db, "FakeFlix-Users");
-  await getDocs(doc)
-    .then((data) => {
-      console.log("querySnapshot 2", data)
-      data.forEach((d) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(d.id, " => ", d.data());
-      })
-    });
+// const getAllData = async (userId) => {
+//   user.userId = userId;
+//   const doc = collection(db, "FakeFlix-Users");
+//   await getDocs(doc)
+//     .then((data) => {
+//       console.log("querySnapshot 2", data)
+//       data.forEach((d) => {
+//         // doc.data() is never undefined for query doc snapshots
+//         console.log(d.id, " => ", d.data());
+//       })
+//     });
 
-}
+// }
 
-const updateElement = async ()=>{
-  // TODO
+const updateElement = async (user, profiles)=>{
+  const q = query(collection(db, 'FakeFlix-Users'), where("userId", "==", user));
+  const querySnapshot = await getDocs(q);
+  const documents = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+  for (const document of documents) {
+      const documentRef = doc(db, 'FakeFlix-Users', document.id);
+
+      await updateDoc(documentRef, { profiles: profiles });
+  }
 }
 
 const addElement = async (user) => {
-  /* requiere un objeto user cumpliendo con la estructura de 
-  Models/UserProfileModel
-  no es necesario completar todos los campos del objeto ya que estan 
-  pre seteados. el objeto user modifica solo los campos que necesiten ser modificados
-  esta funcion NO es UPDATE de un campo existente
-  */
+  /* requiere un objeto user cumpliendo con la estructura de Models/UserProfileModel */
   try {
     const docRef = await addDoc(collection(db, "FakeFlix-Users"), {
       ...user
@@ -57,4 +60,4 @@ const addElement = async (user) => {
   }
 }
 
-export { addElement, getDataById };
+export { addElement, getDataById, updateElement };
