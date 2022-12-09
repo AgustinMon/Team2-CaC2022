@@ -2,9 +2,10 @@
   min-width: var(--anchosiderbar);
   background-color: var(--colorSidebar);
   color: var(--colorLetras);
-  min-height: calc(150vh);
-  float: left;
-  position: relative;
+  height: calc(100vh - 75px);
+  width: 15%;
+	position: sticky;
+	top: 0;
 }
 
 .sidebar[darkmode = "false"]{
@@ -17,24 +18,28 @@ input{
 }
 
 .sidebar ul{
-  margin-top: 40px;
+  margin-top: 25px;
+  padding: 0;
 }
 
-.sidebar ul li a{
+.sidebar ul a{
   text-decoration: none;
   font-size: 1.2rem;
 }
 
-.sidebar ul li{
+.sidebar ul a li{
   border-bottom: 1px solid gray;
+  padding: 5px 20px;
 }
 
 .sidebar li:hover{
-  background-color: #686868;
+  background-color: #383838;
+  color: white;
 }
 
 .desc-grupo{
   margin: 0;
+  padding-top: 8px;
   width: 90%;
   border-top: 1px solid #686868;
   position: absolute;
@@ -42,7 +47,12 @@ input{
 }
 
 .desc-grupo p{
-  text-align: left;
+  text-align: center;
+}
+
+.lista_categorias {
+  height: 70vh;
+  overflow: auto;
 }
 
 @media (max-width: 500px){

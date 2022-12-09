@@ -16,12 +16,14 @@
     font-size: 25px;
     margin: 10px auto;
     color: white;
+    text-align: center;
 }
 
 .nombre_perfil {
     font-size: 25px;
     margin: 10px auto;
     color: #616161;
+    text-align: center;
 }
 
 .perfil_tarjeta {

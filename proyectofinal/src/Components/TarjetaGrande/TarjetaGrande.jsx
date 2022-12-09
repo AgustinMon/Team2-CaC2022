@@ -6,6 +6,9 @@ import { Service } from "../../Services/Service";
 import {Link} from "react-router-dom";
 
 import "./tarjetaGrande.css";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { LANGUAGES } from "../../Constants/languages";
 
 const TarjetaGrande = () => {
 
@@ -32,12 +35,17 @@ const TarjetaGrande = () => {
             backgroundSize: "cover" , 
             backgroundRepeat: "no-repeat"}}
         >
-            <div className="tgrande-desc">
-                <h1>{data.title}</h1>
-                <h3>{data.vote_average}</h3>
-                <p>{data.overview}</p>
+            <div className="tgrande-base">
+                <div className="tgrande-desc">
+                    <h1>{data.title? data.title : data.name}</h1>
+                    <div className="rate_tg">
+                        <FontAwesomeIcon icon={faStar} className="Icono" size="lg" style={{marginRight:'8px'}}/>
+                        <h3>{data.vote_average}</h3>
+                    </div>
+                    <p>{data.overview}</p>
+                </div>
+            <Link to={"/View/"+data.id} className="btn btn-danger">{LANGUAGES[language].OTHER.WATCH_NOW}</Link>
             </div>
-            <Link to={"/View/"+data.id} className="btn btn-danger">Ver Ahora</Link>
         </div>
     )
 }

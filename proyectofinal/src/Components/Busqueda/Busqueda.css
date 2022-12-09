@@ -1,0 +1,15 @@
+
+.contenedor-peliculas_busqueda {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor_busqueda {
+    max-width: 1800px;
+    margin: 25px auto 0;
+    min-height: calc(100vh - 75px);
+}
+
+.contenedor_busqueda h2 {
+    color: var(--colorLetras);
+}

@@ -3,3 +3,11 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.contenedor_categoria {
+    min-height: calc(100vh - 75px);
+}
+
+.letras {
+    color: var(--pruebaColor);
+}

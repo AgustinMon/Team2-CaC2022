@@ -15,6 +15,7 @@ export const LANGUAGES = {
             MAIL_SUCCESS: "Email sent to your mailbox...",
         },
         REGISTER: {
+            HEADING_REGISTER_NEW: "New here?",
             HEADING_REGISTER: "Register",
             INPUT_USERNAME: "Username",
             INPUT_NAME: "Name",
@@ -24,6 +25,15 @@ export const LANGUAGES = {
             INPUT_PASS: "Password",
             INPUT_REPASS: "Re-enter your password",
             PASS_REQUIREMENTS: "(At least 6 characters)"
+        },
+        PROFILES: {
+            WATCHING: "Who's watching?",
+            CREATE_FIRST: "Let's start by creating a profile...",
+            ADD: "Add Profile",
+            MANAGE: "Manage Profiles",
+            MANAGE_NAME: "Edit profile",
+            DELETE: "Delete profile",
+            DONE: "Done",
         },
         NAVBAR: {
             MOVIES: "Movies",
@@ -41,6 +51,11 @@ export const LANGUAGES = {
         },
         OTHER: {
             WATCH_NOW: "Watch now",
+            GENRES: "Genres",
+            NAME: "Name",
+            CANCEL: "Cancel",
+            SAVE: "Save",
+            RESULTS: "Results for:",
         }
     },
     es: {
@@ -59,7 +74,8 @@ export const LANGUAGES = {
             MAIL_SUCCESS: "Email enviado a su casilla de correo...",
         },
         REGISTER: {
-            HEADING_REGISTER: "Registrarse",
+            HEADING_REGISTER_NEW: "No tienes cuenta?",
+            HEADING_REGISTER: "Registrate",
             INPUT_USERNAME: "Nombre de usuario",
             INPUT_NAME: "Nombre",
             INPUT_NAME_PLACEHOLDER : "Ingrese su nombre",
@@ -68,6 +84,15 @@ export const LANGUAGES = {
             INPUT_PASS: "Contraseña",
             INPUT_REPASS: "Re-ingrese su contraseña",
             PASS_REQUIREMENTS: "(Mínimo 6 caracteres)"
+        },
+        PROFILES: {
+            WATCHING: "¿Quién está viendo ahora?",
+            CREATE_FIRST: "Empecemos por crear un perfil...",
+            ADD: "Agregar Perfil",
+            MANAGE: "Administrar perfiles",
+            MANAGE_NAME: "Editar perfil",
+            DELETE: "Eliminar perfil",
+            DONE: "Listo",
         },
         NAVBAR: {
             MOVIES: "Películas",
@@ -85,6 +110,11 @@ export const LANGUAGES = {
         },
         OTHER: {
             WATCH_NOW: "Ver ahora",
+            GENRES: "Géneros",
+            NAME: "Nombre",
+            CANCEL: "Cancelar",
+            SAVE: "Guardar",
+            RESULTS: "Resultados para:",
         }
     },
     // pt: {

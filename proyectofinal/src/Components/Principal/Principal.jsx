@@ -8,6 +8,7 @@ import { Login } from "../LogIn/Login";
 import ListaHorizontal from "../ListaHorizontal/ListaHorizontal";
 import MainContext from "../../Context/MainContext";
 import Idioma from "../Idioma/Idioma";
+import { LANGUAGES } from "../../Constants/languages";
 
 const Principal = () => {
 
@@ -28,31 +29,32 @@ const Principal = () => {
     )
 
     return (
-        <>
+        <div className="contenedor_body">
         {!process.env.REACT_APP_ISDEBUG 
             ? <Login/>
             : <>
                 <Sidebar generos={generos}/>
-                <TarjetaGrande/>
-                <ListaHorizontal
-                    id="1"
-                    tipo="Populares"
-                    getData={Service.getPopular}
-                    generos={generos}></ListaHorizontal>
-                <ListaHorizontal
-                    id="2"
-                    tipo="Top más votados"
-                    getData={Service.getTopRated}
-                    generos={generos}></ListaHorizontal>
-                <ListaHorizontal
-                    id="3"
-                    tipo="Actualmente"
-                    getData={Service.getNowPlaying}
-                    generos={generos}></ListaHorizontal>
+                <div style={{width: '85%'}}>
+                    <TarjetaGrande/>
+                    <ListaHorizontal
+                        id="1"
+                        tipo={LANGUAGES[language].LISTS.POPULAR}
+                        getData={Service.getPopular}
+                        generos={generos}></ListaHorizontal>
+                    <ListaHorizontal
+                        id="2"
+                        tipo={LANGUAGES[language].LISTS.TOP}
+                        getData={Service.getTopRated}
+                        generos={generos}></ListaHorizontal>
+                    <ListaHorizontal
+                        id="3"
+                        tipo={LANGUAGES[language].LISTS.RECENT}
+                        getData={Service.getNowPlaying}
+                        generos={generos}></ListaHorizontal>
+                </div>
             </>
         }
-
-        </>
+        </div>
     );
 }
 

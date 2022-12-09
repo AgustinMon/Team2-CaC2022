@@ -1,17 +1,23 @@
 .fondo{
     background-image: url(../../../public/images/perspective_alpha_website_large.jpg);
-    min-height: calc(100vh) !important;
-    width: 100%;
+    /* min-height: calc(100vh) !important;
+    width: 100%; */
 }
 
-.contenedor{
-    margin: 0 auto 0 auto;
-    background-color: rgba(0,0,0,.65);
+.degrade{
+    /* margin: 0 auto 0 auto; */
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);  
     padding-top: 10px !important;
     padding-left: 80px;
     padding-right: 80px;
-    width: 60% !important;
-    min-height: calc(100vh);
+    /* width: 60% !important; */
+    min-height: calc(100vh - 75px);
+}
+
+.contenedor {
+    width: 60%;
+    margin: 0 auto 0 auto;
 }
 
 .formulario {
@@ -19,7 +25,7 @@
     width: 80%;
 }
 
-.formulario input[type=submit]{
+.formulario input[type=submit], .formulario button{
     width: 100%;
 }
 
@@ -39,6 +45,7 @@ label{
 
 .contenedor h1{
     text-align: center !important;
+    font-size: calc(1.375rem + 1.5vw);
 }
 
 .contenedor h2{
@@ -57,9 +64,9 @@ label{
     text-align: center !important;
 }
 
-.contenedor h2, h3, p, input{
+/* .contenedor h2, h3, p, input{
     text-align: center !important;
-}
+} */
 
 .input-email{
     width: 100%;
@@ -87,6 +94,14 @@ label{
     background-color: #550000;
     color: white;
     z-index: 5;
+}
+
+.boton_login {
+    margin-right: 25px;
+}
+
+.boton_login:hover {
+    text-decoration: underline;
 }
 
 #error-signin{

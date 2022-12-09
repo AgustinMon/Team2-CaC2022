@@ -1,5 +1,6 @@
 import "./navbar.css";
 import { Buscador } from "../Buscador/Buscador";
+import DarkMode from "../DarkMode/DarkMode"
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -13,7 +14,7 @@ import { LANGUAGES } from "../../Constants/languages";
 import { TIPO_PELICULA, TIPO_SERIE } from "../../Constants/constants";
 
 export default function NavBar(props) {
-  const { language, user, changeUser, typeFilm, changeTypeFilm, darkMode } =
+  const { language, user, changeUser, typeFilm, changeTypeFilm, darkMode, toggleDarkMode } =
     useContext(MainContext);
   console.log("user from busqueda", user);
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ export default function NavBar(props) {
   };
 
   return (
-    <Navbar darkmode={`${darkMode}`} bg="dark" variant="dark">
+    <Navbar style={{height: '75px'}}>
       <Container>
         <Navbar.Brand to="#home">
           <img
@@ -42,6 +43,11 @@ export default function NavBar(props) {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
+        { (window.location.toString().toLowerCase().indexOf("/login") == -1 
+            && window.location.toString().toLowerCase().indexOf("/perfiles") == -1
+            && window.location.toString().toLowerCase().indexOf("/team2-cac2022") == -1
+          )
+          &&
         <Nav className="me-auto">
           {user ? (
             <>
@@ -71,14 +77,21 @@ export default function NavBar(props) {
               {LANGUAGES[language].LOGIN.HEADING_LOGIN}
             </Link>
           )}
-        </Nav>
-        <ButtonGroup className="buttonGroup">
-          <Buscador />
-        </ButtonGroup>
+        </Nav>}
+        { (window.location.toString().toLowerCase().indexOf("login") == -1 
+            && window.location.toString().toLowerCase().indexOf("/perfiles") == -1
+            && window.location.toString().toLowerCase().indexOf("/team2-cac2022") == -1
+          )
+          && <div className="contenedor_busqueda_darkmode">
+          <ButtonGroup className="buttonGroup">
+            <Buscador />
+          </ButtonGroup>
+          <Button type="submit" className="Login">
+            {user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}
+          </Button>{" "}
+          <DarkMode></DarkMode>
+        </div>}
         {!user && <Idioma></Idioma>}
-        <Button type="submit" className="Login">
-          {user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}
-        </Button>{" "}
       </Container>
     </Navbar>
   );
