@@ -1,5 +1,6 @@
 nav {
     height: var(--navbarheight);
+    background-color: var(--colorFondo);
 }
 
 .navbar-nav {
@@ -18,6 +19,7 @@ nav {
     margin: 2px 20px;
     font-weight: bold !important;
     border-radius: 2rem 2rem 0 2rem !important;
+    width: 150px;
 }
 
 .navbar .InputBuscador {
@@ -78,7 +80,7 @@ nav {
 }
 
 button {
-    background-color: transparent !important;
+    background-color: transparent;
     border: 0 !important;
 }
 
@@ -86,3 +88,7 @@ button {
     border-bottom: 3px solid #990000 !important;
 }
 
+.contenedor_busqueda_darkmode {
+    display: flex;
+    align-items: center;
+}

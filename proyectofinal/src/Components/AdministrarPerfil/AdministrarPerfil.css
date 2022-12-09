@@ -25,9 +25,9 @@ input[type="radio"]:checked + label > img {
 .input_name_profile input {
 	background: grey;
     padding: 5px 15px;
-	color: white;
+    color: var(--colorLetras);
     width: 30%;
-    outline: 1px solid white;
+    outline: 1px solid var(--colorLetras);
     font-size: 20px;
     margin: 15px 0;
     text-align: start !important;

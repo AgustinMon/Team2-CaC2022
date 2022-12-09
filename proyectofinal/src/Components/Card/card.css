@@ -8,12 +8,12 @@
 
 .tarjeta:hover {
     transform: scale(1.2);
-    background-color: black;
-    border: 2px solid white;
+    background-color: var(--colorFondo);
+    border: 2px solid var(--colorOutline);
 }
 
 .card_info {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--degrade);
     width: 100%;
     height: 100%;
     padding: 4px 10px;
@@ -35,4 +35,6 @@
 
 .genero {
     margin-right: 10px;
+    font-size: 15px;
+    line-height: 8px;
 }

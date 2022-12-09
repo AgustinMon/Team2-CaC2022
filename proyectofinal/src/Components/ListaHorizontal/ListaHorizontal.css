@@ -2,9 +2,9 @@
 	text-align: start;
 }
 
-.titulo_lista[darkmode="false"]{
+/* .titulo_lista[darkmode="false"]{
 	color: rgb(59, 59, 59);
-}
+} */
 
 .contenedor_lista {
     padding-bottom: 30px;
@@ -24,13 +24,13 @@
 .contenedor_lista .flecha-derecha {
 	position: absolute;
 	border: none;
-	background: rgba(0,0,0,0.3);
+	background: var(--degrade);
 	font-size: 40px;
 	height: 50%;
 	top: calc(50% - 25%);
 	line-height: 40px;
 	width: 50px;
-	color: #fff;
+	color: var(--colorOutline);
 	cursor: pointer;
 	z-index: 500;
 	transition: .2s ease all;
@@ -46,7 +46,8 @@
 
 .contenedor_lista .flecha-izquierda:hover,
 .contenedor_lista .flecha-derecha:hover {
-	background: rgba(0,0,0, .9);
+	/* background: rgba(0,0,0, .9); */
+	background: var(--degradeHover);
 }
 
 .lista {

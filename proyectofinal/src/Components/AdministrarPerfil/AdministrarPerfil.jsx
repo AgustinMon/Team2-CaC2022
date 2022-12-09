@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { LANGUAGES } from "../../Constants/languages";
+import MainContext from "../../Context/MainContext";
 import "./AdministrarPerfil.css";
 
 export default function AdministrarPerfil(props) {
+
+  const { language } = useContext(MainContext);
   const handleClose = () => {props.toggleShow(false)};
 
   function confirmarCambios() {
@@ -37,7 +42,7 @@ export default function AdministrarPerfil(props) {
       >
         <Modal.Header style={{ backgroundColor: "black" }} closeButton>
           <Modal.Title>
-            { props.edit ? `Editar perfil de ${props.profile.name}` : "Agregar Perfil"}
+            { props.edit ? LANGUAGES[language].PROFILES.MANAGE_NAME : LANGUAGES[language].PROFILES.ADD}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black" }}>
@@ -47,7 +52,7 @@ export default function AdministrarPerfil(props) {
               type="text"
               name="name"
               id="name"
-              placeholder="Nombre"
+              placeholder={LANGUAGES[language].OTHER.NAME}
               defaultValue={props.profile?.name}
               required
             />
@@ -70,9 +75,9 @@ export default function AdministrarPerfil(props) {
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black" }}>
-          <Button variant="outline-secondary" onClick={handleClose}>Cancelar</Button>
-          <Button variant="outline-primary" onClick={confirmarCambios}>Confirmar</Button>
-          { props.edit && <Button variant="outline-danger" onClick={borrarPerfil}>Eliminar perfil</Button>}
+          <Button variant="outline-secondary" onClick={handleClose}>{LANGUAGES[language].OTHER.CANCEL}</Button>
+          <Button variant="outline-primary" onClick={confirmarCambios}>{LANGUAGES[language].OTHER.SAVE}</Button>
+          { props.edit && <Button variant="outline-danger" onClick={borrarPerfil}>{LANGUAGES[language].PROFILES.DELETE}</Button>}
         </Modal.Footer>
       </Modal>
     </>
