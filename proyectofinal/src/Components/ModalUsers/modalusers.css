@@ -1,0 +1,9 @@
+.popupUsers{
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    z-index: 20;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
