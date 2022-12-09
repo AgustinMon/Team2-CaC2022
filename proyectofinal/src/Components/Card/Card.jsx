@@ -10,7 +10,7 @@ export default class Card extends Component {
         super();
         // info es un objeto con dada pelicula
         this.listaId = props.lista
-        this.title = props.info.title;
+        this.title = props.info.title ? props.info.title : props.info.name;
         this.id = props.info.id;
         this.generos = props.generos;
         console.log(this.generos);

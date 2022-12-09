@@ -8,7 +8,7 @@ import Card from "../Card/Card";
 import MainContext from "../../Context/MainContext";
 
 export const Categoria = () => {
-    let { typeFilm, language } = useContext(MainContext);
+    let { typeFilm, language, darkMode } = useContext(MainContext);
     const {Catid} = useParams();
 
     const [data, setData] = useState([]);
@@ -37,20 +37,21 @@ export const Categoria = () => {
     };
 
     return (
-        <>
-        <Sidebar generos={generos}/>
-        {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''}
-        {generos?.map((element)=> element.id == Catid? <h1>{element.name}</h1> : '')}
-        <div className="contenedor-peliculas">
-        {data?.map(element => {
-            let generos = [];
-            element.genre_ids.map((id) =>
-              generos.push(buscarGenero(id)?.name)
-            );
+        <div className="contenedor_categoria contenedor_body">
+            <Sidebar generos={generos}/>
+            <div style={{margin: '20px', width: '85%'}}>
+                {/* {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''} */}
+                {generos?.map((element)=> element.id == Catid? <h1 className="letras">{element.name}</h1> : '')}
+                <div className="contenedor-peliculas">
+                {data?.map(element => {
+                    let generos = [];
+                    element.genre_ids.map((id) =>
+                    generos.push(buscarGenero(id)?.name)
+                    );
 
-            return <Card key={element.id} info={element} generos={generos} lista={element.id} />})}
+                    return <Card key={element.id} info={element} generos={generos} lista={element.id} />})}
+                </div>
+            </div>
         </div>
-        </>
-        
     )
 }

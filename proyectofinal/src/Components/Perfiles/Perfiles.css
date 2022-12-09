@@ -2,11 +2,12 @@
     width: 1200px;
     margin: 40px auto 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    background-color: var(--colorFondo);
 }
 
 .pagina_perfiles {
-    height: 80vh;
+    height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,15 +18,16 @@
     font-size: 65px;
 }
 
-.boton_administrar_perfiles {
+.boton_perfiles {
     font-size: 20px;
     border: 2px solid #616161;
     padding: 10px 15px;
     text-decoration: none;
     color: #616161;
+    margin: 0 10px ;
 }
 
-.boton_administrar_perfiles:hover {
+.boton_perfiles:hover {
     text-decoration: none;
     color: white;
     border: 2px solid white;

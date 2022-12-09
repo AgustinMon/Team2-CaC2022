@@ -4,7 +4,8 @@ import { LANG_ES, TIPO_PELICULA } from "../Constants/constants";
 const defaultState = {
     darkMode: true,
     language: LANG_ES,
-    typeFilm: TIPO_PELICULA
+    typeFilm: TIPO_PELICULA,
+    user: null
 }
 
 function getInitialState() {

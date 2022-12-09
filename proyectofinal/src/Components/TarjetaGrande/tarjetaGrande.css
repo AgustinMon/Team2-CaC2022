@@ -1,5 +1,5 @@
 .tgrande {
-    height: 350px;
+    height: 450px;
     background-color: rgb(251, 251, 251);
     overflow:hidden;
     position: relative;
@@ -9,32 +9,39 @@
 
 .tgrande h1{
     padding: 25px 25px 25px 25px;
-    color: rgb(255, 255, 255);
-    text-align: right;
+    /* color: rgb(255, 255, 255); */
+    /* text-align: right; */
 }
 
 
 .tgrande .btn{
     position:absolute;
-    left: 25px;
-    bottom: 25px;
+    left: 56px;
+    bottom: 45px;
 }
 
 .tgrande-desc {
     position: absolute;
-    bottom: 50px;
-    right: 25px;
-    width: 80%;
+    top: 50px;
+    left: 50px;
+    width: 50%;
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
-.tgrande-desc h2, h3, p{
-    color: rgb(255, 255, 255);
-    text-align: right !important;
-    margin-right: 20px;
+.tgrande-desc p {
+    font-size: 18px;
 }
 
+.rate_tg {
+    display: flex;
+    align-items: baseline;
+}
+
+.tgrande-base {
+    background-color: var(--degrade);
+    height: 100%;
+}
 
 @media (max-width: 955px) {
     .tgrande-desc {
@@ -48,7 +55,7 @@
     .tgrande h1{
         font-size: rem;
         padding: 10px 25px 10px 25px;
-        color: rgb(255, 255, 255);
+        /* color: rgb(255, 255, 255); */
         text-align: right;
     }
 
@@ -69,7 +76,7 @@
     .tgrande h1{
         font-size: rem;
         padding: 10px 25px 0px 25px;
-        color: rgb(255, 255, 255);
+        /* color: rgb(255, 255, 255); */
         text-align: right;
     }
 }

@@ -1,3 +1,4 @@
+import { TIPO_PELICULA } from "../Constants/constants";
 
 export class Service {
     
@@ -27,7 +28,9 @@ export class Service {
       }
 
       static async getNowPlaying(tipo, language) {
-        let url = `${process.env.REACT_APP_BASE_PATH}/${tipo}/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=${language}`;
+        let now = 'on_the_air';
+        if(tipo == TIPO_PELICULA) now = 'now_playing' 
+        let url = `${process.env.REACT_APP_BASE_PATH}/${tipo}/${now}?api_key=${process.env.REACT_APP_API_KEY}&language=${language}`;
         console.log(url);
         let data = {};
         await fetch(url)

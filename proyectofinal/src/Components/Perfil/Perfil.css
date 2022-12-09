@@ -16,12 +16,18 @@
     font-size: 25px;
     margin: 10px auto;
     color: white;
+    text-align: center;
 }
 
 .nombre_perfil {
     font-size: 25px;
     margin: 10px auto;
     color: #616161;
+    text-align: center;
+}
+
+.perfil_tarjeta {
+    margin: 0 15px;
 }
 
 .perfil_tarjeta:hover {
@@ -32,5 +38,10 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 66px;
+    border-radius: 8px;
+}
+
+.base_tarjeta {
+    background-color: white;
     border-radius: 8px;
 }
