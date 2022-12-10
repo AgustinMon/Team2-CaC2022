@@ -12,11 +12,13 @@ import { useContext } from "react";
 import MainContext from "../../Context/MainContext";
 import { LANGUAGES } from "../../Constants/languages";
 import { TIPO_PELICULA, TIPO_SERIE } from "../../Constants/constants";
+import ModalUsers from "../ModalUsers/ModalUsers";
+import { useState } from "react";
 
 export default function NavBar(props) {
-  const { language, user, changeUser, typeFilm, changeTypeFilm, darkMode, toggleDarkMode } =
+  const { language, user, changeUser, typeFilm, changeTypeFilm } =
     useContext(MainContext);
-  console.log("user from busqueda", user);
+  const [popUpUser, setPopUpUser] = useState(false);
   const navigate = useNavigate();
 
   const logOut = (e) => {
@@ -31,6 +33,10 @@ export default function NavBar(props) {
   const setSeries = (e) => {
     changeTypeFilm(e, TIPO_SERIE);
   };
+
+  const popUpUserMenu = (e) => {
+    setPopUpUser(!popUpUser);
+  }
 
   return (
     <Navbar style={{height: '75px'}}>
@@ -70,7 +76,6 @@ export default function NavBar(props) {
               >
                 {LANGUAGES[language].NAVBAR.MOVIES}
               </button>
-              <button onClick={logOut}>LogOut</button>
             </>
           ) : (
             <Link className="nav-link" to="../LogIn">
@@ -86,8 +91,13 @@ export default function NavBar(props) {
           <ButtonGroup className="buttonGroup">
             <Buscador />
           </ButtonGroup>
-          <Button type="submit" className="Login">
+          <Button type="submit" className="Login" onClick={
+            ()=> {popUpUserMenu()}
+          }>
             {user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}
+          {
+            popUpUser? <ModalUsers></ModalUsers> : ""
+          }
           </Button>{" "}
           <DarkMode></DarkMode>
         </div>}
