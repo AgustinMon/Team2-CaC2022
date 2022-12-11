@@ -92,3 +92,15 @@ button {
     display: flex;
     align-items: center;
 }
+
+.navbar-logo {
+    position: absolute !important;
+    left: 30px;
+    top: 10px;
+}
+
+@media (max-width: 950px){
+    .navbar-logo {
+        width: 150px;
+    }
+}

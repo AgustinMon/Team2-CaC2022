@@ -2,6 +2,7 @@
     border-top: 1px solid var(--colorLetras);
     border-left: 1px solid var(--colorLetras);
     border-right: 1px solid var(--colorLetras);
+    border-radius: 5px;
     width: 100px;
     height: auto;
     background-color: var(--colorBody);
@@ -15,4 +16,8 @@
     border-bottom: 1px solid var(--colorLetras);
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.accion:hover{
+    background-color: #383838;
 }

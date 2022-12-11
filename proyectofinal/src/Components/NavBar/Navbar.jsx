@@ -38,6 +38,10 @@ export default function NavBar(props) {
     setPopUpUser(!popUpUser);
   }
 
+  const UserMenuLeave = (e) => {
+    setPopUpUser(false);
+  }
+
   return (
     <Navbar style={{height: '75px'}}>
       <Container>
@@ -46,7 +50,7 @@ export default function NavBar(props) {
             alt="Logo"
             src={props.src}
             width={props.size}
-            className="d-inline-block align-top"
+            className="d-inline-block align-top navbar-logo"
           />
         </Navbar.Brand>
         { (window.location.toString().toLowerCase().indexOf("/login") == -1 
@@ -91,9 +95,14 @@ export default function NavBar(props) {
           <ButtonGroup className="buttonGroup">
             <Buscador />
           </ButtonGroup>
-          <Button type="submit" className="Login" onClick={
-            ()=> {popUpUserMenu()}
-          }>
+          <Button type="submit" className="Login" 
+            onClick={
+              ()=> {popUpUserMenu()}
+            } 
+            onMouseLeave={
+              ()=> {UserMenuLeave()}
+            }
+          >
             {user ? user : LANGUAGES[language].LOGIN.HEADING_LOGIN}
           {
             popUpUser? <ModalUsers></ModalUsers> : ""
