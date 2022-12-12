@@ -26,8 +26,9 @@ const Rutas = (props) => {
           <Route path="/View/:movie_id" element={<Film/>}/>
           <Route path="/Perfiles" element={<Perfiles/>}/>
           <Route path="/Error" element={<NotFound/>}/>
-          <Route path="*" element={ <Navigate to="/Error" />}/>
+          <Route path="/*" element={ <Navigate to="/Error" />}/>
           <Route path="/Team2-CaC2022/*" element={ <Navigate to="/Error" />}/>
+          <Route path="*" element={ <Navigate to="/Error" />}/>
         </Routes>
     </BrowserRouter>
   );
