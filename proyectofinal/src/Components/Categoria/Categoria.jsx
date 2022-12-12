@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import {Service} from '../../Services/Service';
 import Card from "../Card/Card";
 import MainContext from "../../Context/MainContext";
+import { LANGUAGES } from "../../Constants/languages";
 
 export const Categoria = () => {
     let { typeFilm, language, darkMode } = useContext(MainContext);
@@ -39,6 +40,12 @@ export const Categoria = () => {
     return (
         <div className="contenedor_categoria contenedor_body">
             <Sidebar generos={generos}/>
+            { data?.length === 0 ?
+            <div className="categoria_error">
+                <h2>{LANGUAGES[language].ERROR.GENRE}</h2>
+            </div>
+            :
+            <>
             <div style={{margin: '20px', width: '85%'}}>
                 {/* {process.env.ISDEBUG? <h2>Componente 2 - Pagina de Categoria: {Catid}</h2> : ''} */}
                 {generos?.map((element)=> element.id == Catid? <h1 className="letras">{element.name}</h1> : '')}
@@ -52,6 +59,8 @@ export const Categoria = () => {
                     return <Card key={element.id} info={element} generos={generos} lista={element.id} />})}
                 </div>
             </div>
+            </>
+            }
         </div>
     )
 }

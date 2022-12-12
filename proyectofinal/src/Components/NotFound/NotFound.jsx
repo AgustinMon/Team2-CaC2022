@@ -1,27 +1,26 @@
 import '../LogIn/login.css';
 import './notfound.css';
-import { CATEGORIAS } from "../../Constants/constants";
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import MainContext from "../../Context/MainContext";
 import { LANGUAGES } from "../../Constants/languages";
+import { Link } from 'react-router-dom';
 
 export const NotFound = () => {
-    const { language, user, changeUser } = useContext(MainContext);
+    const { language } = useContext(MainContext);
 
     return (
         <>
             <div className="fondo">
-                <div className="contenedor">
-                    <h1>{LANGUAGES[language].NOTFOUND.TITLE}</h1>
-                    <h1>:(</h1>
-                    <h2 className='mt-4'>... {LANGUAGES[language].NOTFOUND.SUBTITLE}:</h2>
-                    <hr />
-                    <ul className='notfound-list mt-4'>
-                        {CATEGORIAS.map((elem, i) => <li key={elem.id}><Link className="link-light" to={`/Category/${elem.id}`}>{elem.name}</Link></li>)}
-                    </ul>
-                    <hr />
-                    <small>{LANGUAGES[language].LOGIN.TITLE}</small>
+                <div className='degrade'>
+                    <div className="notfound_contenedor">
+                        <div className='notfound_desc'>
+                            <h1>{LANGUAGES[language].NOTFOUND.TITLE}</h1>
+                            <h3 className='mt-4'>{LANGUAGES[language].NOTFOUND.SUBTITLE}</h3>
+                        </div>
+                        <Link className="notfound_home" to="/Home" activeClassname>
+                            {LANGUAGES[language].NAVBAR.HOME}
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

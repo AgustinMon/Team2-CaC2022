@@ -85,6 +85,7 @@ export const Login = () => {
 
   return (
     <>
+      {changeUser(null)}
       <div className="fondo">
         <div className="degrade">
           <div className="contenedor">

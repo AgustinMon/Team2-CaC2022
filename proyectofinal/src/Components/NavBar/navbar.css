@@ -93,14 +93,26 @@ button {
     align-items: center;
 }
 
-.navbar-logo {
+/* .navbar-logo {
     position: absolute !important;
     left: 30px;
     top: 10px;
-}
+} */
 
 @media (max-width: 950px){
     .navbar-logo {
         width: 150px;
     }
+}
+
+.container_navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

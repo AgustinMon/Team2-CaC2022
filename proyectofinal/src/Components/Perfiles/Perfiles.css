@@ -32,3 +32,39 @@
     color: white;
     border: 2px solid white;
 }
+
+@media (max-width: 900px){
+    .pagina_perfiles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .boton_perfiles {
+        display: none;
+    }
+
+    .perfiles_titulo {
+        font-size: 40px;
+    }
+
+    .contenedor_perfiles {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px){
+    .pagina_perfiles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .perfiles_titulo {
+        font-size: 25px;
+    }
+}

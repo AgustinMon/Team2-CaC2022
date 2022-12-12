@@ -15,8 +15,8 @@
 .nombre_perfil_hover {
     font-size: 25px;
     margin: 10px auto;
-    color: white;
     text-align: center;
+    color: white;
 }
 
 .nombre_perfil {
@@ -44,4 +44,46 @@
 .base_tarjeta {
     background-color: white;
     border-radius: 8px;
+}
+
+@media (max-width: 900px){
+
+    .perfil_imagen {
+        width: 80px;
+        height: 80px;
+    }
+
+    .perfil_imagen_hover {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nombre_perfil {
+        font-size: 15px;
+    }
+
+    .nombre_perfil_hover {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .perfil_imagen {
+        width: 80px;
+        height: 80px;
+    }
+
+    .perfil_imagen_hover {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nombre_perfil {
+        font-size: 15px;
+    }
+
+    .nombre_perfil_hover {
+        font-size: 15px;
+    }
 }

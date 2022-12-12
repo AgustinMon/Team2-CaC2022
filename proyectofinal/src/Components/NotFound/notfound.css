@@ -1,20 +1,36 @@
-.notfound-list{
-    display: grid;
-    align-content: space-between;
-    justify-content: space-around;
+
+.notfound_contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
+    height: 60vh;
 }
 
-.notfound-list li{
-    width: 80%;
+.notfound_desc {
+    width: 60%;
 }
 
-.notfound-list li a{
+.notfound_desc h1, .notfound_desc h3 {
+    text-align: center !important;
+}
+
+.notfound_desc h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.notfound_home {
+    font-size: 20px;
+    border: 2px solid #979797;
+    padding: 10px 15px;
     text-decoration: none;
+    color: #979797;
+    margin: 40px 10px 0 ;
 }
 
-.notfound-list li:hover{
-    background-color: gray;
+.notfound_home:hover {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
 }

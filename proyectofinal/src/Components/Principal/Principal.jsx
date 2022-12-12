@@ -7,12 +7,12 @@ import TarjetaGrande from "../TarjetaGrande/TarjetaGrande";
 import { Login } from "../LogIn/Login";
 import ListaHorizontal from "../ListaHorizontal/ListaHorizontal";
 import MainContext from "../../Context/MainContext";
-import Idioma from "../Idioma/Idioma";
 import { LANGUAGES } from "../../Constants/languages";
+import { Navigate } from "react-router-dom";
 
 const Principal = () => {
 
-    let { typeFilm, language, darkMode } = useContext(MainContext);
+    let { typeFilm, language, user } = useContext(MainContext);
     const [generos, setGeneros] = useState([]);
 
     useEffect(()=>{
@@ -30,8 +30,8 @@ const Principal = () => {
 
     return (
         <div className="contenedor_body">
-        {!process.env.REACT_APP_ISDEBUG 
-            ? <Login/>
+        {!process.env.REACT_APP_ISDEBUG && !user
+            ? < Navigate to="/Login"></Navigate>
             : <>
                 <Sidebar generos={generos}/>
                 <div style={{width: '85%'}}>
