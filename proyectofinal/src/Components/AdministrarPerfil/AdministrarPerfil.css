@@ -36,3 +36,8 @@ input[type="radio"]:checked + label > img {
 .input_name_profile input::placeholder {
 	color: rgba(255, 255, 255, 0.5);
 }
+
+.error_perfil {
+  background-color: rgb(124, 0, 0);
+  padding: 5px 20px;
+}

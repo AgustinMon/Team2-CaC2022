@@ -44,7 +44,7 @@ export default function NavBar(props) {
 
   return (
     <Navbar style={{height: '75px'}}>
-      <Container>
+      <div className="container_navbar">
         <Navbar.Brand to="#home">
           <img
             alt="Logo"
@@ -56,6 +56,7 @@ export default function NavBar(props) {
         { (window.location.toString().toLowerCase().indexOf("/login") == -1 
             && window.location.toString().toLowerCase().indexOf("/perfiles") == -1
             && window.location.toString().toLowerCase().indexOf("/team2-cac2022") == -1
+            && window.location.toString().toLowerCase().indexOf("/error") == -1
           )
           &&
         <Nav className="me-auto">
@@ -90,6 +91,7 @@ export default function NavBar(props) {
         { (window.location.toString().toLowerCase().indexOf("login") == -1 
             && window.location.toString().toLowerCase().indexOf("/perfiles") == -1
             && window.location.toString().toLowerCase().indexOf("/team2-cac2022") == -1
+            && window.location.toString().toLowerCase().indexOf("/error") == -1
           )
           && <div className="contenedor_busqueda_darkmode">
           <ButtonGroup className="buttonGroup">
@@ -111,7 +113,7 @@ export default function NavBar(props) {
           <DarkMode></DarkMode>
         </div>}
         {!user && <Idioma></Idioma>}
-      </Container>
+      </div>
     </Navbar>
   );
 }

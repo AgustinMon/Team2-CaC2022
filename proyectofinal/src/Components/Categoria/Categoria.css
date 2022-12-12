@@ -11,3 +11,8 @@
 .letras {
     color: var(--pruebaColor);
 }
+
+.categoria_error {
+    width: 80%;
+    margin-top: 5%;
+}

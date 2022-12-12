@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes} from 'react-router-dom'
 import Principal from '../Components/Principal/Principal';
 import { Categoria } from '../Components/Categoria/Categoria';
 import {NotFound} from '../Components/NotFound/NotFound';
@@ -25,7 +25,8 @@ const Rutas = (props) => {
           <Route path="/Category/:Catid" element={<Categoria/>}/>
           <Route path="/View/:movie_id" element={<Film/>}/>
           <Route path="/Perfiles" element={<Perfiles/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="/Error" element={<NotFound/>}/>
+          <Route path="*" element={ <Navigate to="/Error" />}/>
         </Routes>
     </BrowserRouter>
   );

@@ -46,8 +46,8 @@ export const LANGUAGES = {
             RECENT: "Now playing"
         },
         NOTFOUND: {
-            TITLE: "Sorry, We didn't found it",
-            SUBTITLE: "But you may try this options"
+            TITLE: "Lost your way?",
+            SUBTITLE: "Sorry, we can´t find that page. You'll find loads to explore on the home page."
         },
         OTHER: {
             WATCH_NOW: "Watch now",
@@ -56,6 +56,11 @@ export const LANGUAGES = {
             CANCEL: "Cancel",
             SAVE: "Save",
             RESULTS: "Results for:",
+        },
+        ERROR: {
+            PROFILE_NAME: "Please enter a name",
+            PROFILE_LOGO: "Please select an image for your profile",
+            GENRE: "The selected gender does not exist, please select another."
         }
     },
     es: {
@@ -105,8 +110,8 @@ export const LANGUAGES = {
             RECENT: "Recientes"
         },
         NOTFOUND: {
-            TITLE: "Oops, No lo encontramos",
-            SUBTITLE: "pero podes probar estas categorias"
+            TITLE: "¿Te perdiste?",
+            SUBTITLE: "Lo sentimos, no encontramos esa página. Encontrarás muchos títulos para explorar en la página de inicio."
         },
         OTHER: {
             WATCH_NOW: "Ver ahora",
@@ -115,26 +120,11 @@ export const LANGUAGES = {
             CANCEL: "Cancelar",
             SAVE: "Guardar",
             RESULTS: "Resultados para:",
+        },
+        ERROR: {
+            PROFILE_NAME: "Por favor ingrese un nombre",
+            PROFILE_LOGO: "Por favor seleccione una imagen para su perfil",
+            GENRE: "No existe el género seleccionado, por favor seleccione otro."
         }
-    },
-    // pt: {
-    //     LOGIN: {
-    //         TITLE: "Filmes, séries e muito mais ilimitados.",
-    //         SUBTITLE: "Aproveite onde quiser. Cancele quando quiser.",
-    //         DESCRIPTION: "Este é um site que simula o Netflix, não é real, não insira dados confidenciais.",
-    //         HEADING_LOGIN: "Iniciar sessão",
-    //         INPUT_PLACEHOLDER_EMAIL: "Escreva seu e-mail",
-    //         INPUT_PLACEHOLDER_PASS: "Coloque sua senha",
-    //         INPUT_EXAMPLE: "Prova: team2@team2.com 123456"
-    //     },
-    //     REGISTER: {
-    //         HEADING_REGISTER: "Registro",
-    //         INPUT_USERNAME: "Nombre de usuario",
-    //         INPUT_NAME: "Nombre",
-    //         INPUT_LASTNAME: "Apellido",
-    //         INPUT_EMAIL: "Correo electronico",
-    //         INPUT_PASS: "Contraseña",
-    //         INPUT_REPASS: "Re-ingrese su contraseña",
-    //     }
-    // }
+    }
 }
