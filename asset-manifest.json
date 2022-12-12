@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Team2-CaC2022/static/css/main.f5edd30f.css",
-    "main.js": "/Team2-CaC2022/static/js/main.2dbc422c.js",
+    "main.js": "/Team2-CaC2022/static/js/main.743f03ff.js",
     "static/media/perspective_alpha_website_large.jpg": "/Team2-CaC2022/static/media/perspective_alpha_website_large.acb93a204432103acf9c.jpg",
     "static/media/Fakeflix_logo.png": "/Team2-CaC2022/static/media/Fakeflix_logo.daae8477f8e9dc9230ba.png",
     "static/media/avatar0.png": "/Team2-CaC2022/static/media/avatar0.5db73c5fc920362b0036.png",
     "index.html": "/Team2-CaC2022/index.html",
     "main.f5edd30f.css.map": "/Team2-CaC2022/static/css/main.f5edd30f.css.map",
-    "main.2dbc422c.js.map": "/Team2-CaC2022/static/js/main.2dbc422c.js.map"
+    "main.743f03ff.js.map": "/Team2-CaC2022/static/js/main.743f03ff.js.map"
   },
   "entrypoints": [
     "static/css/main.f5edd30f.css",
-    "static/js/main.2dbc422c.js"
+    "static/js/main.743f03ff.js"
   ]
 }
