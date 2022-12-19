@@ -105,5 +105,19 @@ export class Service {
             .catch((error)=> console.log(error))
             return data
         }
-    }
+      }
+
+	  static async getVideos(idFilm, tipo, language) {
+    
+        if (idFilm == null) return null;
+    
+        const url = `${process.env.REACT_APP_BASE_PATH}/${tipo}/${idFilm}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=${language}`;
+        let data = {};
+        console.log(url);
+        await fetch(url)
+          .then((res) => res.json())
+          .then((d) => data = d)
+          .catch((err) => console.log("error from service: ", err))
+        return data;
+      }
 }

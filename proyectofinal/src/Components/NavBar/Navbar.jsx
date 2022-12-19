@@ -65,22 +65,22 @@ export default function NavBar(props) {
               <Link className="nav-link" to="/Home" activeClassname>
                 {LANGUAGES[language].NAVBAR.HOME}
               </Link>
-              <button
-                className={
-                  typeFilm && typeFilm == TIPO_SERIE ? "subrayado" : ""
-                }
-                onClick={setSeries}
-              >
+              {
+              window.location.toString().toLowerCase().indexOf("view") == -1
+              &&
+              <button className={typeFilm && typeFilm == TIPO_SERIE ? "subrayado" : ""}
+                      onClick={setSeries}>
                 {LANGUAGES[language].NAVBAR.SERIES}
               </button>
-              <button
-                className={
-                  typeFilm && typeFilm == TIPO_PELICULA ? "subrayado" : ""
-                }
-                onClick={setFilms}
-              >
+              }
+              {
+              window.location.toString().toLowerCase().indexOf("view") == -1
+              &&
+              <button className={typeFilm && typeFilm == TIPO_PELICULA ? "subrayado" : ""}
+                      onClick={setFilms}>
                 {LANGUAGES[language].NAVBAR.MOVIES}
               </button>
+              }
             </>
           ) : (
             <Link className="nav-link" to="../LogIn">
