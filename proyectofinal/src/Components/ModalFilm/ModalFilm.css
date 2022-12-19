@@ -1,0 +1,12 @@
+
+.modal_film_button {
+    position: absolute;
+    z-index: 999;
+    top: 40px;
+    left: 40px;
+    transition: transform .3s ease;
+}
+
+.modal_film_button:hover {
+    transform: scale(1.2);
+}

@@ -56,11 +56,16 @@ export const LANGUAGES = {
             CANCEL: "Cancel",
             SAVE: "Save",
             RESULTS: "Results for:",
+            DURATION: "Duration",
+            SEASONS: "Seasons",
+            EPISODES: "Episodes",
+            RELEASE: "Release date"
         },
         ERROR: {
             PROFILE_NAME: "Please enter a name",
             PROFILE_LOGO: "Please select an image for your profile",
-            GENRE: "The selected gender does not exist, please select another."
+            GENRE: "The selected gender does not exist, please select another.",
+            VIDEO_NOT_FOUND: "The selected film does't have any video available at the moment. Please try later or select another language."
         }
     },
     es: {
@@ -120,11 +125,16 @@ export const LANGUAGES = {
             CANCEL: "Cancelar",
             SAVE: "Guardar",
             RESULTS: "Resultados para:",
+            DURATION: "Duración",
+            SEASONS: "Temporadas",
+            EPISODES: "Episodios",
+            RELEASE: "Fecha de lanzamiento"
         },
         ERROR: {
             PROFILE_NAME: "Por favor ingrese un nombre",
             PROFILE_LOGO: "Por favor seleccione una imagen para su perfil",
-            GENRE: "No existe el género seleccionado, por favor seleccione otro."
+            GENRE: "No existe el género seleccionado, por favor seleccione otro.",
+            VIDEO_NOT_FOUND: "La película o serie seleccionada no tiene ningún video disponible en estos momentos. Por favor intente más tarde o seleccione otro idioma."
         }
     }
 }
